@@ -68,7 +68,7 @@ body {
   body.blog {
     background: #f1f9ff; }
 
-h1, h4, h5, h6 {
+h4, h5, h6 {
   font-family: "Playfair Display", serif;
   font-weight: bold;
   color: #222222; }
@@ -76,14 +76,20 @@ h1, h4, h5, h6 {
 h2 {
   font-family: "Playfair Display", serif;
   font-weight: bold;
-  color: #007f8c;
+  color: #aac5b8;
   font-size: 38px; }
 
 h3 {
   font-family: "Playfair Display", serif;
   font-weight: bold;
-  color: #42776a;
+  color: #aac5b8;
   font-size: 36px; }
+
+h1 {
+  font-family: "Playfair Display", serif;
+  font-weight: bold;
+  color: #ffffff;
+  font-size: 38px; }
 
 button:focus {
   outline: none;
@@ -1105,6 +1111,7 @@ button:focus {
 
 /* End Our Room Area css
 ============================================================================================ */
+
 /* Testimonials Area css
 ============================================================================================ */
 .testimonials-area {
@@ -1197,6 +1204,21 @@ button:focus {
 ============================================================================================ */
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+body > .content {
+  flex: 1;
+}
+
+footer {
+  margin-top: auto;
+}
+
 .footer-area {
   min-height: 100%;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url(../img/footer-bg.jpg) no-repeat center;

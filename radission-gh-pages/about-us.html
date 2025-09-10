@@ -23,6 +23,7 @@
   <!-- Main CSS -->
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/responsive.css">
+  
 </head>
 
 <body>
@@ -93,59 +94,113 @@
 		</div>
 	</section>
 	<!--================End Home Banner Area =================-->
+  <!-- Floating Book Now Button -->
+  <button class="book-now-float" data-toggle="modal" data-target="#bookingModal">Book Now</button>
+<!--================ Our Spaces Area =================-->
+<section class="spaces_area section_gap" style="background-color:#f5f5f5;">
+  <div class="container-fluid">
+    <div class="row align-items-center">
+      
+      <!-- Left Column -->
+      <div class="col-lg-5 p-5">
+        <h2 class="font-weight-bold">OUR SPACES</h2>
+        <p>
+          At Ocean Nomads, we’ve designed spaces for everyone — 
+          from cozy areas where you can relax to lively social spots where you can connect with fellow travelers.
+        </p>
+        <ul class="list-unstyled mt-4 space-menu" style="font-weight:bold; font-size:18px; line-height:2; cursor:pointer;">
+          <li data-space="lobby" class="active" style="color:#aac5b8;">LOBBY</li>
+          <li data-space="bar">BAR</li>
+          <li data-space="terrace">CHILL-OUT TERRACE</li>
+          <li data-space="kitchen">KITCHEN</li>
+          <li data-space="laundry">LAUNDRY</li>
+          <li data-space="bathrooms">SHARED BATHROOMS</li>
+          <li data-space="locker">LOCKER ROOM</li>
+        </ul>
+      </div>
 
-	<!--================About Area =================-->
-	<section class="about_area section_gap_top">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12">
-					<div class="main_title">
-						<div class="top-part">
-							<p>Our Mission</p>
-						</div>
-						<h2>
-							More Than Just A Hostel
-						</h2>
-						<div class="bottom_part">
-						<div class="info-box">
-							<p>
-							Three years ago, we set out on a <strong>mission</strong>: to create a place where 
-							<strong>travelers from all over the world</strong> could connect, share 
-							<strong>unforgettable experiences</strong>, and explore the beauty of 
-							<strong>Tenerife</strong> together.
-							</p>
-						</div>
+      <!-- Right Column -->
+      <div class="col-lg-7 p-0">
+        <div class="space_image_wrapper" style="position:relative;">
+          <img id="spaceImage" src="img/spaces/lobby.jpg" alt="Lobby" class="img-fluid w-100" style="height:500px; object-fit:cover;">
+          <div class="space_caption p-4">
+            <h3 id="spaceTitle" class="font-weight-bold">LOBBY</h3>
+            <p id="spaceDesc">
+              Upon entering the hostel, you’ll find a spacious area with tables and comfy sofas where you can rest, 
+              recharge, meet other travelers, work remotely, or play one of our board games.
+            </p>
+          </div>
+        </div>
+      </div>
 
-						<div class="info-box">
-							<p>
-							<strong>Ocean Nomads</strong> is more than just a hostel—it’s a 
-							<strong>vibrant community</strong> where <strong>friendships</strong> are made, 
-							<strong>stories</strong> are shared, and every day brings a 
-							<strong>new adventure</strong>.
-							</p>
-						</div>
+    </div>
+  </div>
+</section>
+<!--================ End Our Spaces Area =================-->
 
-						<div class="info-box">
-							<p>
-							Whether you're here to <strong>surf</strong>, <strong>hike</strong>, <strong>dive</strong>, 
-							or simply enjoy the island’s <strong>laid-back vibes</strong>, our space is designed to 
-							bring people together.
-							</p>
-						</div>
+<script>
+  // Space data
+  const spaces = {
+    lobby: {
+      title: "LOBBY",
+      img: "img/spaces/lobby.jpg",
+      desc: "Upon entering the hostel, you’ll find a spacious area with tables and comfy sofas where you can rest, recharge, meet other travelers, work remotely, or play one of our board games."
+    },
+    bar: {
+      title: "BAR",
+      img: "img/spaces/bar.jpg",
+      desc: "Our lively bar is the perfect spot to grab a drink, meet fellow travelers, and enjoy unforgettable nights together."
+    },
+    terrace: {
+      title: "CHILL-OUT TERRACE",
+      img: "img/spaces/terrace.jpg",
+      desc: "A cozy terrace with ocean views, ideal for relaxing, reading, or watching the sunset with new friends."
+    },
+    kitchen: {
+      title: "KITCHEN",
+      img: "img/spaces/kitchen.jpg",
+      desc: "A fully equipped guest kitchen where you can cook, share meals, and connect over food from around the world."
+    },
+    laundry: {
+      title: "LAUNDRY",
+      img: "img/spaces/laundry.jpg",
+      desc: "Stay fresh on your travels with our convenient self-service laundry facilities."
+    },
+    bathrooms: {
+      title: "SHARED BATHROOMS",
+      img: "img/spaces/bathroom.jpg",
+      desc: "Clean, modern shared bathrooms designed for comfort and convenience."
+    },
+    locker: {
+      title: "LOCKER ROOM",
+      img: "img/spaces/locker.jpg",
+      desc: "Secure lockers to keep your belongings safe while you explore Tenerife."
+    }
+  };
 
-						<div class="info-box">
-							<p>
-							From <strong>cozy communal areas</strong> to <strong>weekly activities</strong>, we make 
-							sure every guest feels <strong>at home</strong>.
-							</p>
-						</div>
-						</div>
+  // Event listener for clicks
+  document.querySelectorAll(".space-menu li").forEach(item => {
+    item.addEventListener("click", () => {
+      // Remove active class from all
+      document.querySelectorAll(".space-menu li").forEach(el => {
+        el.style.color = "grey";
+        el.classList.remove("active");
+      });
+
+      // Highlight selected
+      item.style.color = "#aac5b8";
+      item.classList.add("active");
+
+      // Update right content
+      const spaceKey = item.getAttribute("data-space");
+      document.getElementById("spaceTitle").innerText = spaces[spaceKey].title;
+      document.getElementById("spaceDesc").innerText = spaces[spaceKey].desc;
+      document.getElementById("spaceImage").src = spaces[spaceKey].img;
+    });
+  });
+</script>
 
 
-						<a href="#" class="main_btn mt-45">Request Custom Price</a>
-					</div>
-				</div>
-			</div>
 			<div class="row justify-content-center align-items-center mb-5">
 			<div class="col-lg-10 d-flex flex-wrap">
 				
@@ -240,120 +295,84 @@
 	</section>
 	<!--================End About Area =================-->
 
-	<!--================Testimonials Area =================-->
-	<section class="testimonials-area section_gap color-bg">
-		<div class="container">
-			<div class="text-center">
-				<img class="quote-img" src="img/quote.png" alt="">
-			</div>
-			<div class="testi-slider owl-carousel" data-slider-id="1">
-				<div class="item">
-					<div class="testi-item">
-						<h4>Fanny Spencer</h4>
-						<ul class="list">
-							<li><a href="#"><i class="fa fa-star"></i></a></li>
-							<li><a href="#"><i class="fa fa-star"></i></a></li>
-							<li><a href="#"><i class="fa fa-star"></i></a></li>
-							<li><a href="#"><i class="fa fa-star"></i></a></li>
-							<li><a href="#"><i class="fa fa-star"></i></a></li>
-						</ul>
-						<div class="wow fadeIn" data-wow-duration="1s">
-							<p>
-								As conscious traveling Paup ers we must always be oncerned about our dear Mother Earth. If you think about it,
-								you travel
-								across her face <br> and She is the host to your journey.
-							</p>
-						</div>
-					</div>
-				</div>
-				<div class="item">
-					<div class="testi-item">
-						<h4>Fanny Spencer</h4>
-						<ul class="list">
-							<li><a href="#"><i class="fa fa-star"></i></a></li>
-							<li><a href="#"><i class="fa fa-star"></i></a></li>
-							<li><a href="#"><i class="fa fa-star"></i></a></li>
-							<li><a href="#"><i class="fa fa-star"></i></a></li>
-							<li><a href="#"><i class="fa fa-star"></i></a></li>
-						</ul>
-						<div class="wow fadeIn" data-wow-duration="1s">
-							<p>
-								As conscious traveling Paup ers we must always be oncerned about our dear Mother Earth. If you think about it,
-								you travel
-								across her face <br> and She is the host to your journey.
-							</p>
-						</div>
-					</div>
-				</div>
-				<div class="item">
-					<div class="testi-item">
-						<h4>Fanny Spencer</h4>
-						<ul class="list">
-							<li><a href="#"><i class="fa fa-star"></i></a></li>
-							<li><a href="#"><i class="fa fa-star"></i></a></li>
-							<li><a href="#"><i class="fa fa-star"></i></a></li>
-							<li><a href="#"><i class="fa fa-star"></i></a></li>
-							<li><a href="#"><i class="fa fa-star"></i></a></li>
-						</ul>
-						<div class="wow fadeIn" data-wow-duration="1s">
-							<p>
-								As conscious traveling Paup ers we must always be oncerned about our dear Mother Earth. If you think about it,
-								you travel
-								across her face <br> and She is the host to your journey.
-							</p>
-						</div>
-					</div>
-				</div>
-				<div class="item">
-					<div class="testi-item">
-						<img src="img/quote.png" alt="">
-						<h4>Fanny Spencer</h4>
-						<ul class="list">
-							<li><a href="#"><i class="fa fa-star"></i></a></li>
-							<li><a href="#"><i class="fa fa-star"></i></a></li>
-							<li><a href="#"><i class="fa fa-star"></i></a></li>
-							<li><a href="#"><i class="fa fa-star"></i></a></li>
-							<li><a href="#"><i class="fa fa-star"></i></a></li>
-						</ul>
-						<div class="wow fadeIn" data-wow-duration="1s">
-							<p>
-								As conscious traveling Paup ers we must always be oncerned about our dear Mother Earth. If you think about it,
-								you travel
-								across her face <br> and She is the host to your journey.
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="owl-thumbs d-flex justify-content-center" data-slider-id="1">
-				<div class="owl-thumb-item">
-					<div>
-						<img class="img-fluid" src="img/testimonial/t1.png" alt="">
-					</div>
-					<div class="overlay overlay-grad"></div>
-				</div>
-				<div class="owl-thumb-item">
-					<div>
-						<img class="img-fluid" src="img/testimonial/t2.png" alt="">
-					</div>
-					<div class="overlay overlay-grad"></div>
-				</div>
-				<div class="owl-thumb-item">
-					<div>
-						<img class="img-fluid" src="img/testimonial/t3.png" alt="">
-					</div>
-					<div class="overlay overlay-grad"></div>
-				</div>
-				<div class="owl-thumb-item">
-					<div>
-						<img class="img-fluid" src="img/testimonial/t4.png" alt="">
-					</div>
-					<div class="overlay overlay-grad"></div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!--================End Testimonials Area =================-->
+<section class="testimonials-area section_gap" style="background:#aac5b8 !important; padding:60px 0; text-align:center;">
+  <div class="container text-center">
+    <img class="quote-img mb-3" src="img/quote.png" alt="Quote">
+    <h1 class="mt-3 font-weight-bold">What Our Guests Say</h1>
+    <p class="lead mb-5" style=color:#ffffff;">Genuine 5-Star Moments from Booking.com</p>
+
+    <div id="reviewsCarousel" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+
+        <!-- Review 1 -->
+        <div class="carousel-item active">
+          <div class="testi-item p-4 shadow mx-auto bg-white rounded" style="max-width:700px; color:#333;">
+            <h4 class="font-weight-bold">Dheeraj (Germany)</h4>
+            <div class="mb-2">
+              <i class="fa fa-star text-warning"></i>
+              <i class="fa fa-star text-warning"></i>
+              <i class="fa fa-star text-warning"></i>
+              <i class="fa fa-star text-warning"></i>
+              <i class="fa fa-star text-warning"></i>
+            </div>
+            <p class="mt-3">
+              “Very friendly staff, located near Los Cristianos port. Very accessible and a great place to start your solo journey and meet travelers.”  
+              <br><small><a href="https://www.booking.com/reviews/es/hotel/ocean-house-arona.html" target="_blank">Source: Booking.com</a></small>
+            </p>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="carousel-item">
+          <div class="testi-item p-4 shadow mx-auto bg-white rounded" style="max-width:700px; color:#333;">
+            <h4 class="font-weight-bold">Shalabh18 (France)</h4>
+            <div class="mb-2">
+              <i class="fa fa-star text-warning"></i>
+              <i class="fa fa-star text-warning"></i>
+              <i class="fa fa-star text-warning"></i>
+              <i class="fa fa-star text-warning"></i>
+              <i class="fa fa-star text-warning"></i>
+            </div>
+            <p class="mt-3">
+              “It’s right next to Los Cristianos and Las Americas beaches. Also, a full kitchen and fridge space is available… surrounded by restaurants and surf shops.”  
+              <br><small><a href="https://www.booking.com/reviews/es/hotel/ocean-house-arona.html" target="_blank">Source: Booking.com</a></small>
+            </p>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="carousel-item">
+          <div class="testi-item p-4 shadow mx-auto bg-white rounded" style="max-width:700px; color:#333;">
+            <h4 class="font-weight-bold">Anonymous Guest</h4>
+            <div class="mb-2">
+              <i class="fa fa-star text-warning"></i>
+              <i class="fa fa-star text-warning"></i>
+              <i class="fa fa-star text-warning"></i>
+              <i class="fa fa-star text-warning"></i>
+              <i class="fa fa-star text-warning"></i>
+            </div>
+            <p class="mt-3">
+              “The atmosphere is amazing, very welcoming, and the staff are super friendly. Highly recommended for travelers looking for a community vibe.”  
+              <br><small><a href="https://www.booking.com/reviews/es/hotel/ocean-house-arona.html" target="_blank">Source: Booking.com</a></small>
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Controls -->
+      <a class="carousel-control-prev" href="#reviewsCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#reviewsCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+</section>
+
 
 	<!--================ start footer Area  =================-->
 	<footer class="footer-area section_gap">

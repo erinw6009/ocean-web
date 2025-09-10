@@ -1,19 +1,21 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <link rel="icon" href="img/favicon.png" type="image/png">
   <title>Ocean Nomads Hostel</title>
 
-  <!-- Bootstrap CSS -->
+  <!-- Favicon -->
+  <link rel="icon" href="img/favicon.png" type="image/png">
+
+  <!-- Fonts & Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <!-- Bootstrap & Vendor CSS -->
   <link rel="stylesheet" href="css/bootstrap.css">
-  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <link rel="stylesheet" href="vendors/linericon/style.css">
-  <link rel="stylesheet" href="css/font-awesome.min.css">
   <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
   <link rel="stylesheet" href="vendors/lightbox/simpleLightbox.css">
   <link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
@@ -23,11 +25,32 @@
   <!-- Main CSS -->
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/responsive.css">
+
+  <style>
+    /* Floating Book Now button */
+    .book-now-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #17a2b8;
+      color: #fff;
+      font-weight: bold;
+      padding: 12px 20px;
+      border-radius: 50px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+      z-index: 9999;
+      border: none;
+    }
+
+    .book-now-float:hover {
+      background-color: #138496;
+    }
+  </style>
 </head>
 
 <body>
 
-  <!--================Header Menu Area =================-->
+  <!--================ Header =================-->
   <header class="header_area">
     <div class="top_menu row m0">
       <div class="container">
@@ -38,13 +61,14 @@
         </div>
         <div class="float-right">
           <select>
-            <option value="1">ENG</option>
-            <option value="1">FRA</option>
-            <option value="1">ESP</option>
+            <option>ENG</option>
+            <option>FRA</option>
+            <option>ESP</option>
           </select>
         </div>
       </div>
     </div>
+
     <div class="main_menu">
       <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
@@ -66,30 +90,72 @@
               <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
               <li class="nav-item"><a class="nav-link" href="about-us.html">Services</a></li>
               <li class="nav-item"><a class="nav-link" href="gallery.html">Activities</a></li>
-			  <li class="nav-item"><a class="nav-link" href="work.html">Work With Us</a></li>
-			  <li class="nav-item"><a class="nav-link" href="faqs.html">FAQs</a></li>
+              <li class="nav-item"><a class="nav-link" href="work.html">Work With Us</a></li>
               <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+              <li class="nav-item"><a class="nav-link" href="faqs.html">FAQs</a></li>
+              
+
+              <!-- Book Now Button -->
+              <li class="nav-item">
+                <button class="btn btn-info font-weight-bold ml-3" data-toggle="modal" data-target="#bookingModal">
+                  Book Now
+                </button>
+              </li>
             </ul>
           </div>
         </div>
       </nav>
     </div>
-  </header>
-  <!--================End Header Menu Area =================-->
 
-  <!--================Home Banner Area =================-->
+    <!-- Booking Modal -->
+    <div class="modal fade" id="bookingModal" tabindex="-1" role="dialog" aria-labelledby="bookingModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content p-4">
+          <div class="modal-header">
+            <h5 class="modal-title font-weight-bold" id="bookingModalLabel">Book Your Stay</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form id="bookingFormModal" class="text-center">
+              <div class="form-group">
+                <label for="checkin">Check In</label>
+                <input type="date" class="form-control" id="checkin" required>
+              </div>
+              <div class="form-group">
+                <label for="checkout">Check Out</label>
+                <input type="date" class="form-control" id="checkout" required>
+              </div>
+              <div class="form-group">
+                <label for="currency">Currency</label>
+                <select id="currency" class="form-control" required>
+                  <option value="eur" selected>EUR (€)</option>
+                  <option value="usd">USD ($)</option>
+                  <option value="gbp">GBP (£)</option>
+                </select>
+              </div>
+              <button type="submit" class="btn btn-info btn-block font-weight-bold">Search</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!--================ End Header =================-->
+
+  <!-- Floating Book Now Button -->
+  <button class="book-now-float" data-toggle="modal" data-target="#bookingModal">Book Now</button>
+
+  <!--================ Home Banner =================-->
   <section class="home_banner_area">
     <div class="banner_inner d-flex align-items-center">
-      <div class="overlay bg-parallax" data-stellar-ratio="2" data-stellar-vertical-offset="0"></div>
+      <div class="overlay bg-parallax"></div>
       <div class="container">
         <div class="banner_content text-center">
           <p class="top-text">Welcome to</p>
-          <h1>Ocean Nomads
-			 Hostel</h1>
-          <p class="text">
-            Discover the perfect blend of comfort, community, and adventure by the ocean.
-            Stay, connect, and explore with fellow travelers from around the world.
-          </p>
+          <h1>Ocean Nomads Hostel</h1>
+          <p class="text">Discover the perfect blend of comfort, community, and adventure by the ocean. Stay, connect, and explore with fellow travelers from around the world.</p>
           <a class="play-btn" href="https://www.youtube.com/watch?v=ARA0AxrnHdM">
             <img src="img/video-icon.png" class="vdo-btn" alt="Play Video">
           </a>
@@ -97,28 +163,27 @@
       </div>
     </div>
   </section>
-  <!--================End Home Banner Area =================-->
-    <!--================ Booking Section =================-->
+
+  <!--================ Booking Section =================-->
   <section class="booking_area section_gap">
     <div class="container">
       <div class="booking_form text-center">
         <h2>Book Your Stay</h2>
-        <form class="form-inline justify-content-center">
+        <form id="bookingForm" class="form-inline justify-content-center">
           <div class="form-group mx-2">
             <label for="checkin" class="sr-only">Check In</label>
-            <input type="date" class="form-control" id="checkin" placeholder="Check In">
+            <input type="date" class="form-control" id="checkin" required>
           </div>
           <div class="form-group mx-2">
             <label for="checkout" class="sr-only">Check Out</label>
-            <input type="date" class="form-control" id="checkout" placeholder="Check Out">
+            <input type="date" class="form-control" id="checkout" required>
           </div>
           <div class="form-group mx-2">
-            <label for="guests" class="sr-only">Guests</label>
-            <select class="form-control" id="guests">
-              <option>1 Guest</option>
-              <option>2 Guests</option>
-              <option>3 Guests</option>
-              <option>4+ Guests</option>
+            <label for="currency" class="sr-only">Currency</label>
+            <select id="currency" class="form-control" required>
+              <option value="eur" selected>EUR (€)</option>
+              <option value="usd">USD ($)</option>
+              <option value="gbp">GBP (£)</option>
             </select>
           </div>
           <button type="submit" class="btn btn-primary mx-2">Search</button>
@@ -126,9 +191,8 @@
       </div>
     </div>
   </section>
-  <!--================ End Booking Section =================-->
 
-  <!--================ 3 Circular Features =================-->
+  <!--================ Circular Features =================-->
   <section class="features_area section_gap text-center">
     <div class="container">
       <div class="row">
@@ -153,23 +217,15 @@
       </div>
     </div>
   </section>
-  <!--================ End 3 Circular Features =================-->
 
-    <!--================ Horizontal Sections =================-->
+  <!--================ Horizontal Sections =================-->
   <section class="info_section" style="background-color:#e0f7fa;">
     <div class="container">
       <div class="row align-items-center">
-        <!-- Image Left -->
+        <div class="col-lg-6"><img src="img/b3.jpg" class="img-fluid rounded" alt="Community"></div>
         <div class="col-lg-6">
-          <img src="img/b3.jpg" class="img-fluid rounded" alt="Community">
-        </div>
-        <!-- Text Right -->
-        <div class="col-lg-6">
-          <h2>Our Community</h2>
-          <p>
-            Ocean Nomads is more than a hostel — it's a vibrant family where travelers connect and share experiences. 
-            From cozy shared spaces to organized activities, every day offers new opportunities to meet like-minded explorers. 
-          </p>
+          <h4>Our Community</h4>
+          <p>Ocean Nomads is more than a hostel — it's a vibrant family where travelers connect and share experiences.</p>
         </div>
       </div>
     </div>
@@ -178,18 +234,11 @@
   <section class="info_section" style="background-color:#b2ebf2;">
     <div class="container">
       <div class="row align-items-center">
-        <!-- Text Left -->
         <div class="col-lg-6 order-lg-1 order-2">
-          <h2>Comfortable Rooms</h2>
-          <p>
-            Choose between private or shared dorms, all designed to provide comfort while keeping the community vibe alive. 
-            Fresh linens, cozy beds, and a welcoming atmosphere make it easy to relax after a day of adventure. 
-          </p>
+          <h4>Comfortable Rooms</h4>
+          <p>Choose between private or shared dorms, all designed to provide comfort while keeping the community vibe alive.</p>
         </div>
-        <!-- Image Right -->
-        <div class="col-lg-6 order-lg-2 order-1">
-          <img src="img/section2.jpg" class="img-fluid rounded" alt="Comfortable Rooms">
-        </div>
+        <div class="col-lg-6 order-lg-2 order-1"><img src="img/section2.jpg" class="img-fluid rounded" alt="Rooms"></div>
       </div>
     </div>
   </section>
@@ -197,22 +246,173 @@
   <section class="info_section" style="background-color:#80deea;">
     <div class="container">
       <div class="row align-items-center">
-        <!-- Image Left -->
+        <div class="col-lg-6"><img src="img/section3.jpg" class="img-fluid rounded" alt="Adventures"></div>
         <div class="col-lg-6">
-          <img src="img/section3.jpg" class="img-fluid rounded" alt="Adventures">
-        </div>
-        <!-- Text Right -->
-        <div class="col-lg-6">
-          <h2>Adventures Await</h2>
-          <p>
-            Surf, hike, dive, or simply relax on the beach — Tenerife has it all. 
-            Join our weekly activities and explore the island’s natural beauty together with fellow travelers. 
-          </p>
+          <h4>Adventures Await</h4>
+          <p>Surf, hike, dive, or simply relax on the beach — Tenerife has it all. Join our weekly activities and explore together.</p>
         </div>
       </div>
     </div>
   </section>
-  <!--================ End Horizontal Sections =================-->
+
+  <!--================ Good to Know =================-->
+  <section class="good_to_know py-5" style="background-color: #f8f9fa; color: #333;">
+    <div class="container text-center">
+      <p class="text-uppercase mb-2" style="letter-spacing: 2px;">Some Things to Note</p>
+      <h2 class="font-weight-bold mb-4">Facilities</h2>
+      <p class="mb-5">We provide you with all the information that may be useful during your stay.</p>
+      <div class="row text-center">
+        <div class="col-md-4 mb-4">
+          <p><i class="fas fa-globe mr-2"></i><strong>Daily Events</strong></p>
+          <p><i class="fab fa-whatsapp mr-2"></i><strong>+353 1 855 5660</strong></p>
+          <p><i class="fas fa-bath mr-2"></i><strong>Towels (2.50€)</strong></p>
+          <p><i class="fas fa-bed mr-2"></i><strong>Linen Included</strong></p>
+        </div>
+        <div class="col-md-4 mb-4">
+          <p><i class="fas fa-beer mr-2"></i><strong>Bar Open Everyday</strong></p>
+          <p><i class="fas fa-wifi mr-2"></i><strong>Free WiFi</strong></p>
+          <p><i class="fas fa-door-open mr-2"></i><strong>Check Out 11AM</strong></p>
+          <p><i class="fas fa-key mr-2"></i><strong>Check In 3PM</strong></p>
+        </div>
+        <div class="col-md-4 mb-4">
+          <p><i class="fas fa-clock mr-2"></i><strong>24h Reception</strong></p>
+          <p><i class="fas fa-coffee mr-2"></i><strong>Breakfast 7:30–10:30AM</strong></p>
+          <p><i class="fas fa-suitcase mr-2"></i><strong>Luggage Storage</strong></p>
+          <p><i class="fas fa-tshirt mr-2"></i><strong>Laundry</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials-area section_gap" style="background:#aac5b8 !important; padding:60px 0; text-align:center;">
+  <div class="container text-center">
+    <img class="quote-img mb-3" src="img/quote.png" alt="Quote">
+    <h1 class="mt-3 font-weight-bold">What Our Guests Say</h1>
+    <p class="lead mb-5" style=color:#ffffff;">Genuine 5-Star Moments from Booking.com</p>
+
+    <div id="reviewsCarousel" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+
+        <!-- Review 1 -->
+        <div class="carousel-item active">
+          <div class="testi-item p-4 shadow mx-auto bg-white rounded" style="max-width:700px; color:#333;">
+            <h4 class="font-weight-bold">Dheeraj (Germany)</h4>
+            <div class="mb-2">
+              <i class="fa fa-star text-warning"></i>
+              <i class="fa fa-star text-warning"></i>
+              <i class="fa fa-star text-warning"></i>
+              <i class="fa fa-star text-warning"></i>
+              <i class="fa fa-star text-warning"></i>
+            </div>
+            <p class="mt-3">
+              “Very friendly staff, located near Los Cristianos port. Very accessible and a great place to start your solo journey and meet travelers.”  
+              <br><small><a href="https://www.booking.com/reviews/es/hotel/ocean-house-arona.html" target="_blank">Source: Booking.com</a></small>
+            </p>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="carousel-item">
+          <div class="testi-item p-4 shadow mx-auto bg-white rounded" style="max-width:700px; color:#333;">
+            <h4 class="font-weight-bold">Shalabh18 (France)</h4>
+            <div class="mb-2">
+              <i class="fa fa-star text-warning"></i>
+              <i class="fa fa-star text-warning"></i>
+              <i class="fa fa-star text-warning"></i>
+              <i class="fa fa-star text-warning"></i>
+              <i class="fa fa-star text-warning"></i>
+            </div>
+            <p class="mt-3">
+              “It’s right next to Los Cristianos and Las Americas beaches. Also, a full kitchen and fridge space is available… surrounded by restaurants and surf shops.”  
+              <br><small><a href="https://www.booking.com/reviews/es/hotel/ocean-house-arona.html" target="_blank">Source: Booking.com</a></small>
+            </p>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="carousel-item">
+          <div class="testi-item p-4 shadow mx-auto bg-white rounded" style="max-width:700px; color:#333;">
+            <h4 class="font-weight-bold">Anonymous Guest</h4>
+            <div class="mb-2">
+              <i class="fa fa-star text-warning"></i>
+              <i class="fa fa-star text-warning"></i>
+              <i class="fa fa-star text-warning"></i>
+              <i class="fa fa-star text-warning"></i>
+              <i class="fa fa-star text-warning"></i>
+            </div>
+            <p class="mt-3">
+              “The atmosphere is amazing, very welcoming, and the staff are super friendly. Highly recommended for travelers looking for a community vibe.”  
+              <br><small><a href="https://www.booking.com/reviews/es/hotel/ocean-house-arona.html" target="_blank">Source: Booking.com</a></small>
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Controls -->
+      <a class="carousel-control-prev" href="#reviewsCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#reviewsCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Scripts -->
+  <script>
+    const today = new Date().toISOString().split("T")[0];
+    const checkinInputs = document.querySelectorAll("#checkin");
+    const checkoutInputs = document.querySelectorAll("#checkout");
+
+    checkinInputs.forEach(inp => inp.setAttribute("min", today));
+    checkoutInputs.forEach(inp => inp.setAttribute("min", today));
+
+    checkinInputs.forEach(inp => {
+      inp.addEventListener("change", function () {
+        const checkinDate = new Date(this.value);
+        if (isNaN(checkinDate)) return;
+        const nextDay = new Date(checkinDate);
+        nextDay.setDate(checkinDate.getDate() + 1);
+        const nextDayStr = nextDay.toISOString().split("T")[0];
+        checkoutInputs.forEach(out => {
+          out.setAttribute("min", nextDayStr);
+          if (!out.value || out.value <= this.value) {
+            out.value = nextDayStr;
+          }
+        });
+      });
+    });
+
+    function handleBooking(e, formId) {
+      e.preventDefault();
+      const checkin = document.querySelector(`#${formId} #checkin`).value;
+      const checkout = document.querySelector(`#${formId} #checkout`).value;
+      const currency = document.querySelector(`#${formId} #currency`).value;
+      if (!checkin || !checkout) {
+        alert("Please select dates.");
+        return;
+      }
+      const url = `https://hotels.cloudbeds.com/en/reservation/4RhRCe?checkin=${checkin}&checkout=${checkout}&currency=${currency}`;
+      window.open(url, "_blank");
+    }
+
+    document.getElementById("bookingForm").addEventListener("submit", e => handleBooking(e, "bookingForm"));
+    document.getElementById("bookingFormModal").addEventListener("submit", e => handleBooking(e, "bookingFormModal"));
+  </script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+
 
 
   <!-- The rest of your sections (Booking, About, Rooms, Testimonials, Blog, Footer) stay the same structure -->
