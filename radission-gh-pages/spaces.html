@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="icon" href="img/favicon.png" type="image/png">
+  <title>Ocean Nomads Hostel</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="vendors/linericon/style.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
+  <link rel="stylesheet" href="vendors/lightbox/simpleLightbox.css">
+  <link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
+  <link rel="stylesheet" href="vendors/animate-css/animate.css">
+  <link rel="stylesheet" href="vendors/popup/magnific-popup.css">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  
+</head>
+
+<body>
+
+  <!--================Header Menu Area =================-->
+  <header class="header_area">
+    <div class="top_menu row m0">
+      <div class="container">
+        <div class="float-left">
+          <ul class="list header_social">
+            <li><a href="#">Contact Us +44 (012) 5689 3264</a></li>
+          </ul>
+        </div>
+        <div class="float-right">
+          <select>
+            <option value="1">ENG</option>
+            <option value="1">FRA</option>
+            <option value="1">ESP</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="main_menu">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+          <!-- Brand Logo -->
+          <a class="navbar-brand logo_h" href="index.html">
+         <img src="img/logo.png" alt="Ocean Nomads Hostel Logo" style="height:100px; width:auto;">
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+          <!-- Navbar Links -->
+          <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+            <ul class="nav navbar-nav menu_nav ml-auto">
+              <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+              <li class="nav-item active"><a class="nav-link" href="spaces.html">Spaces</a></li>
+              <li class="nav-item"><a class="nav-link" href="gallery.html">Activities</a></li>
+			  <li class="nav-item"><a class="nav-link" href="work.html">Work With Us</a></li>
+			  <li class="nav-item"><a class="nav-link" href="faqs.html">FAQs</a></li>
+              <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <!--================End Header Menu Area =================-->
+
+	<!--================Home Banner Area =================-->
+	<section class="banner_area">
+		<div class="banner_inner d-flex align-items-center">
+			<div class="overlay bg-parallax" data-stellar-ratio="0.9" data-stellar-vertical-offset="0" data-background=""></div>
+			<div class="container">
+				<div class="banner_content text-center">
+					<h2>Spaces</h2>
+					<div class="page_link">
+						<a href="index.html">Home</a>
+						<a href="spaces.html">Spaces</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--================End Home Banner Area =================-->
+  <!-- Floating Book Now Button -->
+  <button class="book-now-float" data-toggle="modal" data-target="#bookingModal">Book Now</button>
+<!--================ Our Spaces Area =================-->
+<section class="spaces_area section_gap" style="background-color:#f5f5f5;">
+  <div class="container-fluid">
+    <div class="row align-items-center">
+      
+      <!-- Left Column -->
+      <div class="col-lg-5 p-5">
+        <h2 class="font-weight-bold">OUR SPACES</h2>
+        <p>
+          At Ocean Nomads, we’ve designed spaces for everyone — 
+          from cozy areas where you can relax to lively social spots where you can connect with fellow travelers.
+        </p>
+        <ul class="list-unstyled mt-4 space-menu" style="font-weight:bold; font-size:18px; line-height:2; cursor:pointer;">
+          <li data-space="lobby" class="active" style="color:#aac5b8;">LOBBY</li>
+          <li data-space="bar">BAR</li>
+          <li data-space="terrace">CHILL-OUT TERRACE</li>
+          <li data-space="kitchen">KITCHEN</li>
+          <li data-space="laundry">LAUNDRY</li>
+          <li data-space="bathrooms">SHARED BATHROOMS</li>
+          <li data-space="locker">LOCKER ROOM</li>
+        </ul>
+      </div>
+
+      <!-- Right Column -->
+      <div class="col-lg-7 p-0">
+        <div class="space_image_wrapper" style="position:relative;">
+          <img id="spaceImage" src="img/spaces/lobby.jpg" alt="Lobby" class="img-fluid w-100" style="height:500px; object-fit:cover;">
+          <div class="space_caption p-4">
+            <h3 id="spaceTitle" class="font-weight-bold" style="color: #eda494;">LOBBY</h3>
+            <p id="spaceDesc">
+              Upon entering the hostel, you’ll find a spacious area with tables and comfy sofas where you can rest, 
+              recharge, meet other travelers, work remotely, or play one of our board games.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!--================ End Our Spaces Area =================-->
+
+<script>
+  // Space data
+  const spaces = {
+    lobby: {
+      title: "LOBBY",
+      img: "img/spaces/lobby.jpg",
+      desc: "Upon entering the hostel, you’ll find a spacious area with tables and comfy sofas where you can rest, recharge, meet other travelers, work remotely, or play one of our board games."
+    },
+    bar: {
+      title: "BAR",
+      img: "img/spaces/bar.jpg",
+      desc: "Our lively bar is the perfect spot to grab a drink, meet fellow travelers, and enjoy unforgettable nights together."
+    },
+    terrace: {
+      title: "CHILL-OUT TERRACE",
+      img: "img/spaces/terrace.jpg",
+      desc: "A cozy terrace with ocean views, ideal for relaxing, reading, or watching the sunset with new friends."
+    },
+    kitchen: {
+      title: "KITCHEN",
+      img: "img/spaces/kitchen.JPG",
+      desc: "A fully equipped guest kitchen where you can cook, share meals, and connect over food from around the world."
+    },
+    laundry: {
+      title: "LAUNDRY",
+      img: "img/spaces/laundry.jpg",
+      desc: "Stay fresh on your travels with our convenient self-service laundry facilities."
+    },
+    bathrooms: {
+      title: "SHARED BATHROOMS",
+      img: "img/spaces/bathroom.jpg",
+      desc: "Clean, modern shared bathrooms designed for comfort and convenience."
+    },
+    locker: {
+      title: "LOCKER ROOM",
+      img: "img/spaces/locker.jpg",
+      desc: "Secure lockers to keep your belongings safe while you explore Tenerife."
+    }
+  };
+
+  // Event listener for clicks
+  document.querySelectorAll(".space-menu li").forEach(item => {
+    item.addEventListener("click", () => {
+      // Remove active class from all
+      document.querySelectorAll(".space-menu li").forEach(el => {
+        el.style.color = "grey";
+        el.classList.remove("active");
+      });
+
+      // Highlight selected
+      item.style.color = "#aac5b8";
+      item.classList.add("active");
+
+      // Update right content
+      const spaceKey = item.getAttribute("data-space");
+      document.getElementById("spaceTitle").innerText = spaces[spaceKey].title;
+      document.getElementById("spaceDesc").innerText = spaces[spaceKey].desc;
+      document.getElementById("spaceImage").src = spaces[spaceKey].img;
+    });
+  });
+</script>
+
+<!--================ Private Rooms =================-->
+<!--================ Private Rooms =================-->
+<section id="private-rooms" class="py-5" style="background-color:#f5f5f5;">
+  <div class="container rounded-4 shadow-lg p-4" style="background-color:white;">
+    <div class="row align-items-center">
+
+      <!-- Left: Text -->
+      <div class="col-lg-6 mb-4 mb-lg-0">
+        <h2 class="font-weight-bold mb-4" style="color: #eda494;">Private Rooms</h2>
+        <ul class="list-unstyled" style="font-size:18px; line-height:1.8;">
+          <li>✨ Cozy & comfy beds</li>
+          <li>🛏️ Fresh linens included</li>
+          <li>🌿 Your own peaceful retreat</li>
+          <li>🎉 Access to all social areas & events</li>
+        </ul>
+        <p class="mt-3"><em>Perfect for solo travelers, couples, or friends. Relax when you want, connect when you choose. 🌍</em></p>
+      </div>
+
+      <!-- Right: Video -->
+      <div class="col-lg-6 text-center">
+        <div class="video_area small-video position-relative rounded-4 overflow-hidden">
+          <img class="img-fluid rounded-4 shadow" src="img/video-1.jpg" alt="Private Room">
+          <div class="overlay overlay-bg"></div>
+          <a class="popup-youtube" href="https://www.youtube.com/watch?v=VufDd-QL1c0">
+            <img src="img/video-icon-1.png" alt="Play Video">
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!--================ Shared Dorms =================-->
+<section id="shared-dorms" class="py-5" style="background-color:#e8f0ec;">
+  <div class="container rounded-4 shadow-lg p-4" style="background-color:white;">
+    <div class="row align-items-center">
+
+      <!-- Left: Text -->
+      <div class="col-lg-6 order-lg-1 order-2 mt-4 mt-lg-0">
+        <h2 class="mb-3">Shared Dorms</h2>
+        <ul class="list-unstyled" style="font-size:18px; line-height:1.8;">
+          <li>🤝 Meet fellow travelers</li>
+          <li>🛏️ Cozy beds & storage</li>
+          <li>🌍 A true community vibe</li>
+          <li>🎶 Perfect for stories & new friends</li>
+        </ul>
+        <p class="mt-3"><em>Stay social, make memories, and enjoy the hostel life at its best! 🏄‍♂️</em></p>
+      </div>
+
+      <!-- Right: Video -->
+      <div class="col-lg-6 text-center order-lg-2 order-1">
+        <div class="video_area small-video position-relative rounded-4 overflow-hidden">
+          <img class="img-fluid rounded-4 shadow" src="img/video-1.jpg" alt="Shared Dorms">
+          <div class="overlay overlay-bg"></div>
+          <a class="popup-youtube" href="https://www.youtube.com/watch?v=VufDd-QL1c0">
+            <img src="img/video-icon-1.png" alt="Play Video">
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!--================ End Shared Dorms =================-->
+
+
+
+	<!--================ start footer Area  =================-->
+	<footer class="footer-area section_gap">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3  col-md-6 col-sm-6">
+					<div class="single-footer-widget">
+						<h6>About Agency</h6>
+						<p>
+							The world has become so fasted that people don’t want to standby reading page of info they would much rather
+							look at a presentation and understand message.
+						</p>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6 col-sm-6">
+					<div class="single-footer-widget">
+						<h6>Quick Links</h6>
+						<div class="row">
+							<ul class="col footer-nav">
+								<li><a href="#">Sitemaps</a></li>
+								<li><a href="#">Categories</a></li>
+								<li><a href="#">Archives</a></li>
+								<li><a href="#">Advertise</a></li>
+								<li><a href="#">Ad Choice</a></li>
+							</ul>
+							<ul class="col footer-nav">
+								<li><a href="#">Privacy Policy</a></li>
+								<li><a href="#">Terms of Use</a></li>
+								<li><a href="#">Help Center</a></li>
+								<li><a href="#">Newsletters</a></li>
+								<li><a href="#">Feedback</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-3  col-md-6 col-sm-6">
+					<div class="single-footer-widget">
+						<h6>Newsletter</h6>
+						<p>For business professionals caught between high OEM price mediocre print and graphic.</p>
+						<div class="" id="mc_embed_signup">
+
+							<form target="_blank" novalidate="true" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
+							 method="get" class="form-inline">
+
+								<div class="d-flex flex-row">
+
+									<input class="form-control" name="EMAIL" placeholder="Enter Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Email '"
+									 required="" type="email">
+
+
+									<button class="click-btn btn btn-default"><i class="lnr lnr-location" aria-hidden="true"></i></button>
+									<div style="position: absolute; left: -5000px;">
+										<input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
+									</div>
+
+									<!-- <div class="col-lg-4 col-md-4">
+											<button class="bb-btn btn"><span class="lnr lnr-arrow-right"></span></button>
+										</div>  -->
+								</div>
+								<div class="info"></div>
+							</form>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3  col-md-6 col-sm-6">
+					<div class="single-footer-widget mail-chimp">
+						<h6 class="mb-20">Instafeed</h6>
+						<ul class="instafeed d-flex flex-wrap">
+							<li><img src="img/instagram/Image-01.jpg" alt=""></li>
+							<li><img src="img/instagram/Image-02.jpg" alt=""></li>
+							<li><img src="img/instagram/Image-03.jpg" alt=""></li>
+							<li><img src="img/instagram/Image-04.jpg" alt=""></li>
+							<li><img src="img/instagram/Image-05.jpg" alt=""></li>
+							<li><img src="img/instagram/Image-06.jpg" alt=""></li>
+							<li><img src="img/instagram/Image-07.jpg" alt=""></li>
+							<li><img src="img/instagram/Image-08.jpg" alt=""></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="footer-bottom d-flex justify-content-between align-items-center flex-wrap">
+				<div>
+					<p class="footer-text m-0"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+				</div>
+				<div class="footer-social d-flex align-items-center">
+					<a href="#"><i class="fa fa-facebook"></i></a>
+					<a href="#"><i class="fa fa-twitter"></i></a>
+					<a href="#"><i class="fa fa-dribbble"></i></a>
+					<a href="#"><i class="fa fa-behance"></i></a>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!--================ End footer Area  =================-->
+
+
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="js/jquery.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="js/popper.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/stellar.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+	<script src="vendors/lightbox/simpleLightbox.min.js"></script>
+	<script src="vendors/nice-select/js/jquery.nice-select.min.js"></script>
+	<script src="vendors/isotope/imagesloaded.pkgd.min.js"></script>
+	<script src="vendors/isotope/isotope.pkgd.min.js"></script>
+	<script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+	<script src="js/owl-carousel-thumb.min.js"></script>
+	<script src="vendors/popup/jquery.magnific-popup.min.js"></script>
+	<script src="js/jquery.ajaxchimp.min.js"></script>
+	<script src="vendors/counter-up/jquery.waypoints.min.js"></script>
+	<script src="vendors/counter-up/jquery.counterup.js"></script>
+	<script src="js/mail-script.js"></script>
+	<script src="js/theme.js"></script>
+</body>
+
+</html>
