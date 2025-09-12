@@ -71,7 +71,7 @@ body {
 h4, h5, h6 {
   font-family: "Playfair Display", serif;
   font-weight: bold;
-  color: #222222; }
+  color: #ffffff; }
 
 h2 {
   font-family: "Playfair Display", serif;
@@ -82,8 +82,8 @@ h2 {
 h3 {
   font-family: "Playfair Display", serif;
   font-weight: bold;
-  color: #aac5b8;
-  font-size: 36px; }
+  color: #00130a;
+  font-size: 30px; }
 
 h1 {
   font-family: "Playfair Display", serif;
@@ -187,7 +187,7 @@ button:focus {
         .header_area .navbar .nav .nav-item .nav-link:after {
           display: none; }
       .header_area .navbar .nav .nav-item:hover .nav-link, .header_area .navbar .nav .nav-item.active .nav-link {
-        color: #4d8eff; }
+        color: #aac5b8 }
       .header_area .navbar .nav .nav-item.submenu {
         position: relative; }
         .header_area .navbar .nav .nav-item.submenu ul {
@@ -467,6 +467,26 @@ button:focus {
 /* End Home Banner Area css
 ============================================================================================ */
 
+.section-divider {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  line-height: 0; /* no gaps */
+  overflow: visible; /* force visible */
+  position: relative;
+  z-index: 1;
+}
+
+.section-divider img {
+  display: block;
+  width: 100%;
+  height: 25vh;   /* 10% of viewport height */
+  object-fit: cover; /* ensures it fills the space without stretching weirdly */
+  margin: 0;
+  padding: 0;
+}
+
+
 /* Reservation Form Area css
 ============================================================================================ */
 .reservation_form_area .res_form_inner {
@@ -563,6 +583,35 @@ button:focus {
 
 /* End Reservation Form Area css
 ============================================================================================ */
+
+/*-----------about us on home----------------------------------------- */
+  .info-card {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+  .info-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  }
+
+  .info-card .card-img {
+    height: 200px;
+    object-fit: cover;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+  }
+
+  .about_us_section h2 {
+    font-size: 2.5rem;
+  }
+
+  .about_us_section p {
+    font-size: 0.9rem;
+  }
+
+
 /*============== contact_area css ================*/
 .mapBox {
   height: 420px;
@@ -1026,6 +1075,15 @@ button:focus {
     -ms-transform: translateY(-50%);
     -o-transform: translateY(-50%);
     transform: translateY(-50%); }
+
+
+
+/* Smooth infinite scroll */
+@keyframes scrollVideos {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
 
 /* End About Area css
 ============================================================================================ */
