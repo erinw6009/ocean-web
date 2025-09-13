@@ -26,88 +26,63 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/responsive.css">
 
-  <style>
-    /* Floating Book Now button */
-    .book-now-float {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #17a2b8;
-      color: #fff;
-      font-weight: bold;
-      padding: 12px 20px;
-      border-radius: 50px;
-      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-      z-index: 9999;
-      border: none;
-    }
-
-    .book-now-float:hover {
-      background-color: #138496;
-    }
-  </style>
+  
 </head>
 
 <body>
 
-  <!--================ Header =================-->
-  <header class="header_area">
-    <div class="top_menu row m0">
-      <div class="container">
-        <div class="float-left">
-          <ul class="list header_social">
-            <li><a href="#">Contact Us +44 (012) 5689 3264</a></li>
-          </ul>
-        </div>
-        <div class="float-right">
-          <select>
-            <option>ENG</option>
-            <option>FRA</option>
-            <option>ESP</option>
-          </select>
-        </div>
+<!--================ Header =================-->
+<header class="header_area">
+  <div class="top_menu row m0">
+    <div class="container">
+      <div class="float-left">
+        <ul class="list header_social">
+          <li><a href="#">Contact Us +34 662 47 80 17</a></li>
+        </ul>
       </div>
     </div>
+  </div>
 
-    <div class="main_menu">
-      <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container">
-          <!-- Brand Logo -->
-          <a class="navbar-brand logo_h" href="index.html">
-            <img src="img/logo.png" alt="Ocean Nomads Hostel Logo" style="height:100px; width:auto;">
-          </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse"
-            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-            aria-expanded="false" aria-label="Toggle navigation">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
+  <div class="main_menu">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container">
+        <!-- Brand Logo -->
+        <a class="navbar-brand logo_h" href="index.html">
+          <img src="img/logo.png" alt="Ocean Nomads Hostel Logo" style="height:100px; width:auto;">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+          data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
 
-          <!-- Navbar Links -->
-          <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
-            <ul class="nav navbar-nav menu_nav ml-auto">
-              <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
-              <li class="nav-item"><a class="nav-link" href="spaces.html">Spaces</a></li>
-              <li class="nav-item"><a class="nav-link" href="gallery.html">Activities</a></li>
-              <li class="nav-item"><a class="nav-link" href="work.html">Work With Us</a></li>
-              <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-              <li class="nav-item"><a class="nav-link" href="faqs.html">FAQs</a></li>
-              
+        <!-- Navbar Links -->
+        <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+          <ul class="nav navbar-nav menu_nav ml-auto">
+            <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="spaces.html">Spaces</a></li>
+            <li class="nav-item"><a class="nav-link" href="gallery.html">Activities</a></li>
+            <li class="nav-item"><a class="nav-link" href="work.html">Work With Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            <li class="nav-item"><a class="nav-link" href="faqs.html">FAQs</a></li>
 
-              <!-- Book Now Button -->
-              <li class="nav-item">
-                <button class="btn btn-info font-weight-bold ml-3" data-toggle="modal" data-target="#bookingModal">
-                  Book Now
-                </button>
-              </li>
-            </ul>
-          </div>
+            <!-- Book Now Button in Navbar -->
+            <li class="nav-item">
+              <button class="btn btn-info font-weight-bold ml-3" data-toggle="modal" data-target="#bookingModal">
+                Book Now
+              </button>
+            </li>
+          </ul>
         </div>
-      </nav>
-    </div>
+      </div>
+    </nav>
+  </div>
+</header>
+<!--================ End Header =================-->
 
-<!--================ Booking Modal =================-->
+<!--================ Booking Modal (placed OUTSIDE header) =================-->
 <div class="modal fade" id="bookingModal" tabindex="-1" role="dialog" aria-labelledby="bookingModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content p-4">
@@ -146,11 +121,36 @@
     </div>
   </div>
 </div>
-  </header>
-  <!--================ End Header =================-->
 
-  <!-- Floating Book Now Button -->
-  <button class="book-now-float" data-toggle="modal" data-target="#bookingModal">Book Now</button>
+<!-- Floating Book Now Button -->
+<button class="book-now-float" data-toggle="modal" data-target="#bookingModal">Book Now</button>
+
+<!-- Fix z-index -->
+<style>
+.modal {
+  z-index: 1050 !important;
+}
+.modal-backdrop {
+  z-index: 1040 !important;
+}
+.book-now-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #17a2b8;
+  color: #fff;
+  font-weight: bold;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+  z-index: 1100;
+  cursor: pointer;
+}
+.book-now-float:hover {
+  background: #138496;
+}
+</style>
 
 <!--================ Home Banner =================-->
 <section class="home_banner_area">
@@ -349,18 +349,18 @@
         <div class="col-md-4 mb-4">
           <p><i class="fas fa-globe mr-2"></i><strong>Daily Events</strong></p>
           <p><i class="fab fa-whatsapp mr-2"></i><strong>+353 1 855 5660</strong></p>
-          <p><i class="fas fa-bath mr-2"></i><strong>Towels (2.50€)</strong></p>
+          <p><i class="fas fa-bath mr-2"></i><strong>Towels (3€)</strong></p>
           <p><i class="fas fa-bed mr-2"></i><strong>Linen Included</strong></p>
         </div>
         <div class="col-md-4 mb-4">
-          <p><i class="fas fa-beer mr-2"></i><strong>Bar Open Everyday</strong></p>
+          <p><i class="fas fa-beer mr-2"></i><strong>Bar</strong></p>
           <p><i class="fas fa-wifi mr-2"></i><strong>Free WiFi</strong></p>
           <p><i class="fas fa-door-open mr-2"></i><strong>Check Out 11AM</strong></p>
-          <p><i class="fas fa-key mr-2"></i><strong>Check In 3PM</strong></p>
+          <p><i class="fas fa-key mr-2"></i><strong>Check In 2PM-9PM</strong></p>
         </div>
         <div class="col-md-4 mb-4">
-          <p><i class="fas fa-clock mr-2"></i><strong>24h Reception</strong></p>
-          <p><i class="fas fa-coffee mr-2"></i><strong>Breakfast 7:30–10:30AM</strong></p>
+          <p><i class="fas fa-water mr-2"></i><strong>Filtered Water Station</strong></p>
+          <p><i class="fas fa-wind mr-2"></i><strong>Air Conditioning</strong></p>
           <p><i class="fas fa-suitcase mr-2"></i><strong>Luggage Storage</strong></p>
           <p><i class="fas fa-tshirt mr-2"></i><strong>Laundry</strong></p>
         </div>
@@ -500,6 +500,72 @@
   </div>
 </section>
 
+<!--================ Hostel Footer =================-->
+<footer class="footer-area" style="background:#aac5b8; color:#fff; padding:50px 0 20px;">
+  <div class="container">
+    <div class="row">
+
+      <!-- Logo + About -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <img src="img/logo.png" alt="Ocean Nomads Hostel Logo" style="max-width:150px;" class="mb-3">
+        <p>Ocean Nomads Hostel is an adults-only co-living and co-working space by the beach.  
+        A place to connect, create, and share adventures in Tenerife.</p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-lg-2 col-md-6 mb-4">
+        <h5 class="mb-3">Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="index.html" style="color:#fff;">Home</a></li>
+          <li><a href="spaces.html" style="color:#fff;">Spaces</a></li>
+          <li><a href="gallery.html" style="color:#fff;">Activities</a></li>
+          <li><a href="work.html" style="color:#fff;">Work With Us</a></li>
+          <li><a href="faqs.html" style="color:#fff;">FAQs</a></li>
+          <li><a href="contact.html" style="color:#fff;">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="col-lg-3 col-md-6 mb-4">
+        <h5 class="mb-3">Contact</h5>
+        <p><i class="fas fa-map-marker-alt mr-2"></i> Los Cristianos, Tenerife, Spain</p>
+        <p><i class="fas fa-phone mr-2"></i> +34 600 123 456</p>
+        <p><i class="fas fa-envelope mr-2"></i>oceannomadshostel@gmail.com</p>
+      </div>
+
+      <!-- Social Media -->
+      <div class="col-lg-3 col-md-6 mb-4">
+        <h5 class="mb-3">Follow Us</h5>
+        <a href="https://instagram.com/oceannomadshostal" target="_blank" class="mr-3" style="color:#fff; font-size:20px;">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://wa.me/34600123456" target="_blank" class="mr-3" style="color:#fff; font-size:20px;">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+       
+      </div>
+    </div>
+
+    <hr style="border-color:rgba(255,255,255,0.3);">
+
+    <div class="row">
+      <div class="col text-center">
+        <p class="mb-0">&copy; <script>document.write(new Date().getFullYear());</script> Ocean Nomads Hostel. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+<!--================ End Hostel Footer =================-->
+
+<!-- Floating Side Tabs -->
+<div class="side-tabs">
+  <a href="https://wa.me/1234567890" target="_blank" class="tab whatsapp" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+  <a href="https://instagram.com/oceannomadshostal" target="_blank" class="tab instagram" aria-label="Instagram">
+    <i class="fab fa-instagram"></i>
+  </a>
+</div>
 
 
   <!-- Scripts -->
