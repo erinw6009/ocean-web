@@ -164,18 +164,41 @@ button:focus {
 
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
+/* Make header overlay the banner */
 .header_area {
   position: absolute;
-  width: 100%;
   top: 0;
   left: 0;
-  z-index: 9999999;
-  transition: background 0.4s, all 0.3s linear; }
-  .header_area .navbar {
-    background: #ffffff;
-    padding: 0px;
-    border: 0px;
-    border-radius: 0px; }
+  width: 100%;
+  background: transparent;
+  z-index: 1000;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* On scroll, make it solid */
+.header_area.scrolled {
+  background: #ffffff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.header_area .nav-link {
+  color: #fff; /* white links for banner */
+  transition: color 0.3s ease;
+}
+
+.header_area.scrolled .nav-link {
+  color: #333; /* dark links after scroll */
+}
+
+.header_area .navbar-brand img {
+  height: 80px; /* adjust as needed */
+  transition: height 0.3s ease;
+}
+
+.header_area.scrolled .navbar-brand img {
+  height: 60px;
+}
+
     .header_area .navbar .nav .nav-item {
       margin-right: 45px; }
       .header_area .navbar .nav .nav-item .nav-link {
@@ -464,6 +487,25 @@ button:focus {
       .banner_area .banner_inner .banner_content .page_link a:hover {
         color: #4d8eff; }
 
+          /* Floating Book Now button */
+    .book-now-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #17a2b8;
+      color: #fff;
+      font-weight: bold;
+      padding: 12px 20px;
+      border-radius: 50px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+      z-index: 9999;
+      border: none;
+    }
+
+    .book-now-float:hover {
+      background-color: #138496;
+    }
+
 /* End Home Banner Area css
 ============================================================================================ */
 
@@ -480,10 +522,48 @@ button:focus {
 .section-divider img {
   display: block;
   width: 100%;
-  height: 25vh;   /* 10% of viewport height */
+  height: 20vh;   /* 10% of viewport height */
   object-fit: cover; /* ensures it fills the space without stretching weirdly */
   margin: 0;
   padding: 0;
+}
+
+/* Floating Side Tabs */
+.side-tabs {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 9999;
+}
+
+.side-tabs .tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 0 8px 8px 0;
+  color: #fff;
+  font-size: 22px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.side-tabs .whatsapp {
+  background: #25D366;
+}
+
+.side-tabs .instagram {
+  background: #C13584;
+}
+
+.side-tabs .tab:hover {
+  width: 55px;
+  filter: brightness(1.1);
 }
 
 
