@@ -34,7 +34,7 @@
     <div class="container">
       <div class="float-left">
         <ul class="list header_social">
-          <li><a href="#">Contact Us +34 662 47 80 17</a></li>
+          <li><a href="#">Contact Us +34 657 46 01 53</a></li>
         </ul>
       </div>
     </div>
@@ -160,34 +160,49 @@
           </div>
           <div class="info_item">
             <i class="lnr lnr-phone-handset"></i>
-            <h6><a href="tel:+34662478017">+34 662 47 80 17</a></h6>
+            <h6><a href="tel:+34662478017">+34 657 46 01 53</a></h6>
             <p>Mon to Fri 9am to 6pm</p>
           </div>
-          <div class="info_item">
-            <i class="lnr lnr-envelope"></i>
-            <h6><a href="mailto:oceannomadshostel@gmail.com">oceannomadshostel@gmail.com</a></h6>
-            <p>Send us your query anytime!</p>
-          </div>
+         
         </div>
 
-        <form class="contact_form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-          <div class="form-group">
-            <input type="text" class="form-control" name="name" placeholder="Enter your name" required>
-          </div>
-          <div class="form-group">
-            <input type="email" class="form-control" name="email" placeholder="Enter email address" required>
-          </div>
-          <div class="form-group">
-            <input type="text" class="form-control" name="subject" placeholder="Enter Subject">
-          </div>
-          <div class="form-group">
-            <textarea class="form-control" name="message" rows="4" placeholder="Enter Message"
-              required></textarea>
-          </div>
-          <div class="text-right">
-            <button type="submit" class="submit_btn">Send Message</button>
-          </div>
-        </form>
+        <!-- Contact Form -->
+<div class="d-flex justify-content-end">
+  <form action="https://api.web3forms.com/submit" method="POST" 
+        class="p-4 rounded shadow bg-light" style="max-width: 400px; width: 100%;">
+
+    <!-- Replace with your Access Key -->
+    <input type="hidden" name="access_key" value="fe120c97-03a7-4293-b056-792f9e8578bb">
+
+    <!-- Name -->
+    <div class="form-group mb-3">
+      <label for="name" class="font-weight-bold">Your Name</label>
+      <input type="text" id="name" name="name" class="form-control" placeholder="Enter your name" required>
+    </div>
+
+    <!-- Email -->
+    <div class="form-group mb-3">
+      <label for="email" class="font-weight-bold">Your Email</label>
+      <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email" required>
+    </div>
+
+    <!-- Message -->
+    <div class="form-group mb-3">
+      <label for="message" class="font-weight-bold">Message</label>
+      <textarea id="message" name="message" class="form-control" rows="4" placeholder="Write your message here..." required></textarea>
+    </div>
+
+    <!-- Honeypot Spam Protection -->
+    <input type="checkbox" name="botcheck" class="d-none">
+
+    <!-- Submit Button -->
+    <button type="submit" class="btn btn-info btn-block font-weight-bold">
+      Send Message
+    </button>
+  </form>
+</div>
+
+
       </div>
     </div>
   </div>
@@ -223,8 +238,8 @@
       <div class="col-lg-3 col-md-6 mb-4">
         <h5 class="mb-3">Contact</h5>
         <p><i class="fas fa-map-marker-alt mr-2"></i> Los Cristianos, Tenerife, Spain</p>
-        <p><i class="fas fa-phone mr-2"></i> +34 600 123 456</p>
-        <p><i class="fas fa-envelope mr-2"></i>oceannomadshostel@gmail.com</p>
+        <p><i class="fas fa-phone mr-2"></i> +34 657 46 01 53</p>
+        
       </div>
 
       <!-- Social Media -->
@@ -252,7 +267,7 @@
 <!--================ End Hostel Footer =================-->
 <!-- Floating Side Tabs -->
 <div class="side-tabs">
-  <a href="https://wa.me/1234567890" target="_blank" class="tab whatsapp" aria-label="WhatsApp">
+  <a href="https://chat.whatsapp.com/Csnb6aOwZlY1CeNQ3R6nyc?mode=ems_wa_t" target="_blank" class="tab whatsapp" aria-label="WhatsApp">
     <i class="fab fa-whatsapp"></i>
   </a>
   <a href="https://instagram.com/oceannomadshostal" target="_blank" class="tab instagram" aria-label="Instagram">

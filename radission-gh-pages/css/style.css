@@ -165,6 +165,7 @@ button:focus {
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
 /* Make header overlay the banner */
+/* Keep overlay effect for desktop */
 .header_area {
   position: absolute;
   top: 0;
@@ -175,29 +176,33 @@ button:focus {
   transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* On scroll, make it solid */
+/* On scroll, solid background */
 .header_area.scrolled {
   background: #ffffff;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
-.header_area .nav-link {
-  color: #fff; /* white links for banner */
-  transition: color 0.3s ease;
+/* Mobile fix */
+@media (max-width: 767px) {
+  .header_area {
+    position: relative;   /* remove absolute on small screens */
+    background: #ffffff;  /* solid header on mobile */
+  }
+
+  .header_area .nav-link {
+    color: #333 !important; /* dark links for visibility */
+  }
+
+  .home_banner_area,
+  .home_banner_area .banner_inner {
+    padding-top: 80px;  /* push banner down so it's not blocked */
+  }
+
+  .header_area .navbar-brand img {
+    height: 60px !important; /* smaller logo on mobile */
+  }
 }
 
-.header_area.scrolled .nav-link {
-  color: #333; /* dark links after scroll */
-}
-
-.header_area .navbar-brand img {
-  height: 80px; /* adjust as needed */
-  transition: height 0.3s ease;
-}
-
-.header_area.scrolled .navbar-brand img {
-  height: 60px;
-}
 
     .header_area .navbar .nav .nav-item {
       margin-right: 45px; }
@@ -436,10 +441,18 @@ button:focus {
   max-width: 1620px;
   margin: auto; }
 
+/* Ensure hero/banner doesn’t overlap next section */
 .banner_area {
   position: relative;
   z-index: 1;
-  min-height: 300px; }
+  padding-bottom: 40px; /* adds space below */
+}
+
+/* If About section needs push */
+.about-section {
+  padding-top: 40px; /* adjust as needed */
+}
+
   .banner_area .banner_inner {
     position: relative;
     overflow: hidden;
@@ -1353,149 +1366,55 @@ body > .content {
   flex: 1;
 }
 
-footer {
-  margin-top: auto;
+/* ===== Footer ===== */
+.footer {
+  background: #222;
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
 }
 
-.footer-area {
-  min-height: 100%;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url(../img/footer-bg.jpg) no-repeat center;
-  background-size: cover; }
-  .footer-area h6 {
-    color: #fff;
-    margin-bottom: 25px;
-    font-size: 18px;
-    font-weight: 600; }
+.footer .footer-columns {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
-.copy-right-text i,
-.copy-right-text a {
-  color: #4d8eff; }
+.footer .footer-column {
+  flex: 1 1 250px;
+  min-width: 200px;
+}
 
-.instafeed {
-  margin: 0px -24px;
-  padding: 0 15px; }
-  @media (max-width: 767px) {
-    .instafeed {
-      margin: -16px; } }
-  @media (max-width: 575px) {
-    .instafeed {
-      margin: 0px;
-      padding: 0; } }
-  .instafeed li {
-    overflow: hidden;
-    width: 25%; }
-    .instafeed li img {
-      margin: 5px; }
-
-@media (max-width: 575px) {
-  .footer-social {
-    margin-top: 15px; } }
-.footer-social a {
-  padding-left: 25px;
-  transition: all 300ms linear 0s; }
-  @media (max-width: 575px) {
-    .footer-social a:first-child {
-      padding-left: 0; } }
-  .footer-social a:hover i {
-    color: #4d8eff; }
-.footer-social i {
-  color: #cccccc;
-  transition: all 300ms linear 0s; }
-@media (max-width: 991px) {
-  .footer-social {
-    text-align: left; } }
-
-.single-footer-widget .footer-nav li {
-  list-style: none;
-  margin-bottom: 12px; }
-  @media (max-width: 991px) {
-    .single-footer-widget .footer-nav li {
-      margin-bottom: 3px; } }
-  .single-footer-widget .footer-nav li a {
-    color: #777777; }
-    .single-footer-widget .footer-nav li a:hover {
-      color: #ffffff; }
-.single-footer-widget input {
-  border: 1px solid #777777;
-  width: 80% !important;
-  font-weight: 300;
-  background: transparent;
-  color: #ffffff;
-  padding-left: 20px;
-  border-radius: 0;
-  font-size: 14px; }
-  .single-footer-widget input:focus {
-    box-shadow: none;
-    color: #ffffff;
-    background: #222222; }
-.single-footer-widget .bb-btn {
-  background: #4d8eff;
+.footer a {
+  color: #bbb;
+  text-decoration: none;
+}
+.footer a:hover {
   color: #fff;
-  font-weight: 300;
-  border-radius: 0;
-  z-index: 9999;
-  cursor: pointer; }
-.single-footer-widget .info {
-  position: absolute;
-  margin-top: 20%;
-  color: #fff;
-  font-size: 12px;
-  background: transparent; }
-  .single-footer-widget .info.valid {
-    color: green; }
-  .single-footer-widget .info.error {
-    color: red; }
-.single-footer-widget .click-btn {
-  background: #4d8eff;
-  color: #fff;
-  border-radius: 0;
-  border-top-left-radius: 0px;
-  border-bottom-left-radius: 0px;
-  padding: 7px 12px;
-  border: 0; }
-.single-footer-widget ::-moz-selection {
-  /* Code for Firefox */
-  background-color: #191919 !important;
-  color: #ffffff; }
-.single-footer-widget ::selection {
-  background-color: #191919 !important;
-  color: #ffffff; }
-.single-footer-widget ::-webkit-input-placeholder {
-  /* WebKit, Blink, Edge */
-  color: #ffffff;
-  font-weight: 300; }
-.single-footer-widget :-moz-placeholder {
-  /* Mozilla Firefox 4 to 18 */
-  color: #ffffff;
-  opacity: 1;
-  font-weight: 300; }
-.single-footer-widget ::-moz-placeholder {
-  /* Mozilla Firefox 19+ */
-  color: #ffffff;
-  opacity: 1;
-  font-weight: 300; }
-.single-footer-widget :-ms-input-placeholder {
-  /* Internet Explorer 10-11 */
-  color: #ffffff;
-  font-weight: 300; }
-.single-footer-widget ::-ms-input-placeholder {
-  /* Microsoft Edge */
-  color: #ffffff;
-  font-weight: 300; }
+}
 
 .footer-bottom {
-  margin-top: 50px; }
-  @media (max-width: 991px) {
-    .footer-bottom {
-      margin-top: 10px; } }
-  @media (max-width: 380px) {
-    .footer-bottom {
-      text-align: left !important; } }
+  border-top: 1px solid #444;
+  margin-top: 20px;
+  padding-top: 15px;
+  font-size: 14px;
+}
 
-.footer-text a,
-.footer-text i {
-  color: #4d8eff; }
-
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .footer .footer-columns {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .footer .footer-column {
+    min-width: 100%;
+  }
+}
+/* End Footer css
 /*---------------------------------------------------- */
 
 /*# sourceMappingURL=style.css.map */

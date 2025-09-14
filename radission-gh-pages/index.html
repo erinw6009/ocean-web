@@ -125,32 +125,7 @@
 <!-- Floating Book Now Button -->
 <button class="book-now-float" data-toggle="modal" data-target="#bookingModal">Book Now</button>
 
-<!-- Fix z-index -->
-<style>
-.modal {
-  z-index: 1050 !important;
-}
-.modal-backdrop {
-  z-index: 1040 !important;
-}
-.book-now-float {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #17a2b8;
-  color: #fff;
-  font-weight: bold;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 30px;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
-  z-index: 1100;
-  cursor: pointer;
-}
-.book-now-float:hover {
-  background: #138496;
-}
-</style>
+
 
 <!--================ Home Banner =================-->
 <section class="home_banner_area">
@@ -241,54 +216,8 @@
 <!--================ End Home Banner Area =================-->
 
 .
-<div class="section-divider">
-  <img src="img/shapes2.png" alt="Section Divider" />
-</div>
 
 
-
-
-
-<!--================ Circular Features =================-->
-<section class="features_area section_gap text-center"style="background-color:#eda494;">
-  <div class="container">
-    <div class="row">
-    <div class="container text-center">
-      <p class="text-uppercase mb-2" style="letter-spacing: 2px; color:#986054;">Explore our hostel</p>
-      <h2 class="text-center font-weight-bold mb-4" style="color: #986054;">Rooms and Activities</h2>
-    </div>
-
-      <!-- Private Rooms -->
-      <div class="col-lg-4 col-md-6">
-        <a href="spaces.html#private-rooms" class="feature_item d-block">
-          <img src="img/private.jpg" class="rounded-circle mb-3" alt="Private Rooms" width="200" height="200">
-          <h4>Private Rooms</h4>
-        </a>
-      </div>
-
-      <!-- Shared Dorms -->
-      <div class="col-lg-4 col-md-6">
-        <a href="spaces.html#shared-dorms" class="feature_item d-block">
-          <img src="img/shared.JPG" class="rounded-circle mb-3" alt="Shared Dorms" width="200" height="200">
-          <h4>Shared Dorms</h4>
-        </a>
-      </div>
-
-      <!-- Activities -->
-      <div class="col-lg-4 col-md-6">
-        <a href="gallery.html#activities" class="feature_item d-block">
-          <img src="img/activities/surf.jpg" class="rounded-circle mb-3" alt="Activities" width="200" height="200">
-          <h4>Activities</h4>
-        </a>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<div class="section-divider">
-  <img src="img/shapes2.png" alt="Section Divider" />
-</div>
 
   <!-- ============== About Us + Info Sections ============== -->
 <section class="about_us_section py-5" style="background-color: #d1e0d9;">
@@ -334,6 +263,90 @@
   </div>
 </section>
 
+
+  <!--================ Video Carousel =================-->
+
+<section class="video-carousel">
+  <style>
+    .video-carousel .video-strip {
+      display: flex;
+      flex-direction: row;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      gap: 10px;
+      padding: 10px 0;
+    }
+    .video-carousel .video-strip video {
+      height: 220px;
+      min-width: 320px;
+      max-width: 100%;
+      border-radius: 12px;
+      object-fit: cover;
+      flex-shrink: 0;
+      background: #000;
+    }
+    .video-carousel .container-fluid {
+      padding-left: 0;
+      padding-right: 0;
+      overflow-x: hidden;
+    }
+  </style>
+  <div class="container-fluid p-0">
+    <div class="container text-center">
+      <p class="text-uppercase mb-2" style="letter-spacing: 2px; color:#070000;">Our hostel vibes</p>
+      <h2 class="text-center font-weight-bold mb-4" style="color: #aac5b8;">What we're up to!</h2>
+    </div>
+    <div class="video-strip">
+      <video src="videos/kareoke.mp4" autoplay loop muted playsinline></video>
+      <video src="videos/volleyball.mp4" autoplay loop muted playsinline></video>
+      <video src="videos/swim.MP4" autoplay loop muted playsinline></video>
+      <video src="videos/salsa.mp4" autoplay loop muted playsinline></video>
+      <video src="videos/kitchen.mp4" autoplay loop muted playsinline></video>
+      <video src="videos/sunbathe.mp4" autoplay loop muted playsinline></video>
+    </div>
+  </div>
+</section>
+
+<!--================ Circular Features =================-->
+<section class="features_area section_gap text-center"style="background-color:#eda494;">
+  <div class="container">
+    <div class="row">
+    <div class="container text-center">
+      <p class="text-uppercase mb-2" style="letter-spacing: 2px; color:#986054;">Explore our hostel</p>
+      <h2 class="text-center font-weight-bold mb-4" style="color: #986054;">Rooms and Activities</h2>
+    </div>
+
+      <!-- Private Rooms -->
+      <div class="col-lg-4 col-md-6">
+        <a href="spaces.html#private-rooms" class="feature_item d-block">
+          <img src="img/private.jpg" class="rounded-circle mb-3" alt="Private Rooms" width="200" height="200">
+          <h4>Private Rooms</h4>
+        </a>
+      </div>
+
+      <!-- Shared Dorms -->
+      <div class="col-lg-4 col-md-6">
+        <a href="spaces.html#shared-dorms" class="feature_item d-block">
+          <img src="img/shared.JPG" class="rounded-circle mb-3" alt="Shared Dorms" width="200" height="200">
+          <h4>Shared Dorms</h4>
+        </a>
+      </div>
+
+      <!-- Activities -->
+      <div class="col-lg-4 col-md-6">
+        <a href="gallery.html#activities" class="feature_item d-block">
+          <img src="img/activities/surf.jpg" class="rounded-circle mb-3" alt="Activities" width="200" height="200">
+          <h4>Activities</h4>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+ 
+
 <div class="section-divider">
   <img src="img/shapes.jpg" alt="Section Divider" />
 </div>
@@ -372,13 +385,11 @@
   <div class="section-divider">
   <img src="img/shapes.jpg" alt="Section Divider" />
 </div>
-<div class="section-divider">
-  <img src="img/shapes2.png" alt="Section Divider" />
-</div>
+
 
   <section class="testimonials-area section_gap" style="background:#aac5b8 !important; padding:60px 0; text-align:center;">
   <div class="container text-center">
-    <img class="quote-img mb-3" src="img/quote.png" alt="Quote">
+    
     <p class="text-uppercase mb-2" style="letter-spacing: 2px; color:#ffffff;">What our guests think</p>
     <h1 class="mt-3 font-weight-bold">Reviews</h1>
     <p class="lead mb-5" style=color:#ffffff;">Genuine 5-Star Moments from Booking.com</p>
@@ -457,48 +468,7 @@
 <div class="section-divider">
   <img src="img/shapes2.png" alt="Section Divider" />
 </div>
-  <!--================ Video Carousel =================-->
 
-<section class="video-carousel">
-  <style>
-    .video-carousel .video-strip {
-      display: flex;
-      flex-direction: row;
-      overflow-x: auto;
-      scroll-behavior: smooth;
-      gap: 10px;
-      padding: 10px 0;
-    }
-    .video-carousel .video-strip video {
-      height: 220px;
-      min-width: 320px;
-      max-width: 100%;
-      border-radius: 12px;
-      object-fit: cover;
-      flex-shrink: 0;
-      background: #000;
-    }
-    .video-carousel .container-fluid {
-      padding-left: 0;
-      padding-right: 0;
-      overflow-x: hidden;
-    }
-  </style>
-  <div class="container-fluid p-0">
-    <div class="container text-center">
-      <p class="text-uppercase mb-2" style="letter-spacing: 2px; color:#070000;">Our hostel vibes</p>
-      <h2 class="text-center font-weight-bold mb-4" style="color: #aac5b8;">What we're up to</h2>
-    </div>
-    <div class="video-strip">
-      <video src="videos/volleyball.mp4" autoplay loop muted playsinline></video>
-      <video src="videos/kitchen.mp4" autoplay loop muted playsinline></video>
-      <video src="videos/salsa.mp4" autoplay loop muted playsinline></video>
-      <video src="videos/sunbathe.mp4" autoplay loop muted playsinline></video>
-      <video src="videos/kareoke.mp4" autoplay loop muted playsinline></video>
-      <video src="videos/swim.MP4" autoplay loop muted playsinline></video>
-    </div>
-  </div>
-</section>
 
 <!--================ Hostel Footer =================-->
 <footer class="footer-area" style="background:#aac5b8; color:#fff; padding:50px 0 20px;">
@@ -529,8 +499,8 @@
       <div class="col-lg-3 col-md-6 mb-4">
         <h5 class="mb-3">Contact</h5>
         <p><i class="fas fa-map-marker-alt mr-2"></i> Los Cristianos, Tenerife, Spain</p>
-        <p><i class="fas fa-phone mr-2"></i> +34 600 123 456</p>
-        <p><i class="fas fa-envelope mr-2"></i>oceannomadshostel@gmail.com</p>
+        <p><i class="fas fa-phone mr-2"></i> +34 657 46 01 53</p>
+        
       </div>
 
       <!-- Social Media -->
@@ -559,7 +529,7 @@
 
 <!-- Floating Side Tabs -->
 <div class="side-tabs">
-  <a href="https://wa.me/1234567890" target="_blank" class="tab whatsapp" aria-label="WhatsApp">
+  <a href="https://chat.whatsapp.com/Csnb6aOwZlY1CeNQ3R6nyc?mode=ems_wa_t" target="_blank" class="tab whatsapp" aria-label="WhatsApp">
     <i class="fab fa-whatsapp"></i>
   </a>
   <a href="https://instagram.com/oceannomadshostal" target="_blank" class="tab instagram" aria-label="Instagram">
