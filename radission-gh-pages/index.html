@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>Ocean Nomads Hostel</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="img/favicon.png" type="image/png">
+
+  <!-- Fonts & Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <!-- Bootstrap & Vendor CSS -->
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="vendors/linericon/style.css">
+  <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
+  <link rel="stylesheet" href="vendors/lightbox/simpleLightbox.css">
+  <link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
+  <link rel="stylesheet" href="vendors/animate-css/animate.css">
+  <link rel="stylesheet" href="vendors/popup/magnific-popup.css">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  
+</head>
+
+<body>
+
+<!--================ Header =================-->
+<header class="header_area">
+  <div class="top_menu row m0">
+    <div class="container">
+      <div class="float-left">
+        <ul class="list header_social">
+          <li><a href="#">Contact Us +34 662 47 80 17</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="main_menu">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container">
+        <!-- Brand Logo -->
+        <a class="navbar-brand logo_h" href="index.html">
+          <img src="img/logo.png" alt="Ocean Nomads Hostel Logo" style="height:100px; width:auto;">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+          data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <!-- Navbar Links -->
+        <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+          <ul class="nav navbar-nav menu_nav ml-auto">
+            <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="spaces.html">Spaces</a></li>
+            <li class="nav-item"><a class="nav-link" href="gallery.html">Activities</a></li>
+            <li class="nav-item"><a class="nav-link" href="work.html">Work With Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            <li class="nav-item"><a class="nav-link" href="faqs.html">FAQs</a></li>
+
+            <!-- Book Now Button in Navbar -->
+            <li class="nav-item">
+              <button class="btn btn-info font-weight-bold ml-3" data-toggle="modal" data-target="#bookingModal">
+                Book Now
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+<!--================ End Header =================-->
+
+<!--================ Booking Modal (placed OUTSIDE header) =================-->
+<div class="modal fade" id="bookingModal" tabindex="-1" role="dialog" aria-labelledby="bookingModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content p-4">
+      <div class="modal-header">
+        <h5 class="modal-title font-weight-bold" id="bookingModalLabel">Book Your Stay</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="bookingFormModal" class="text-center">
+          <div class="form-group">
+            <label for="checkinModal">Check In</label>
+            <input type="date" class="form-control" id="checkinModal" required>
+          </div>
+          <div class="form-group">
+            <label for="checkoutModal">Check Out</label>
+            <input type="date" class="form-control" id="checkoutModal" required>
+          </div>
+          <div class="form-group">
+            <label for="currencyModal">Currency</label>
+            <select id="currencyModal" class="form-control" required>
+              <option value="eur" selected>EUR (€)</option>
+              <option value="usd">USD ($)</option>
+              <option value="gbp">GBP (£)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="promoModal">Promo Code</label>
+            <input type="text" class="form-control" id="promoModal" placeholder="Promo Code (optional)">
+          </div>
+          <button type="submit" class="btn btn-info btn-block font-weight-bold">Search</button>
+          <small id="promoWarningModal" class="text-warning d-none">⚠️ Invalid promo code</small>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Floating Book Now Button -->
+<button class="book-now-float" data-toggle="modal" data-target="#bookingModal">Book Now</button>
+
+
+
+<!--================ Home Banner =================-->
+<section class="home_banner_area">
+  <div class="banner_inner d-flex align-items-center">
+    <div class="overlay bg-parallax"></div>
+    <div class="container">
+      <div class="banner_content text-center">
+        <p class="top-text">Welcome to</p>
+        <h1>Ocean Nomads Hostel</h1>
+        <p class="text">
+          Our adults only, co-working hostel for you to discover blend of comfort, community, and adventure. 
+          Stay, connect, and explore with fellow travelers from around the world.
+        </p>
+
+        <!-- Booking Form -->
+        <div class="booking_form mt-4">
+          
+          <form id="bookingForm" class="form-inline justify-content-center">
+            <div class="form-group mx-2">
+              <label for="checkin" class="sr-only">Check In</label>
+              <input type="date" class="form-control" id="checkin" required>
+            </div>
+            <div class="form-group mx-2">
+              <label for="checkout" class="sr-only">Check Out</label>
+              <input type="date" class="form-control" id="checkout" required>
+            </div>
+            <div class="form-group mx-2">
+              <label for="currency" class="sr-only">Currency</label>
+              <select id="currency" class="form-control" required>
+                <option value="eur" selected>EUR (€)</option>
+                <option value="usd">USD ($)</option>
+                <option value="gbp">GBP (£)</option>
+              </select>
+            </div>
+            <div class="form-group mx-2">
+              <label for="promo" class="sr-only">Promo Code</label>
+              <input type="text" class="form-control" id="promo" placeholder="Promo Code (optional)">
+            </div>
+            <button type="submit" class="btn btn-info font-weight-bold mx-2">Search</button>
+          </form>
+          <small id="promoWarning" class="text-warning d-none">⚠️ Invalid promo code</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!--================ JavaScript for Booking =================-->
+<script>
+  // List of valid promo codes
+  const validPromoCodes = ["nomad25"];
+
+  function handleBooking(formId, checkinId, checkoutId, currencyId, promoId, warningId) {
+    document.getElementById(formId).addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const checkin = document.getElementById(checkinId).value;
+      const checkout = document.getElementById(checkoutId).value;
+      const currency = document.getElementById(currencyId).value;
+      const promo = document.getElementById(promoId).value.trim();
+      const warning = document.getElementById(warningId);
+
+      // If promo entered but invalid
+      if (promo && !validPromoCodes.includes(promo.toLowerCase())) {
+        warning.classList.remove("d-none");
+        return;
+      } else {
+        warning.classList.add("d-none");
+      }
+
+      // Build booking URL
+      let url = `https://hotels.cloudbeds.com/en/reservation/4RhRCe/?checkin=${checkin}&checkout=${checkout}&currency=${currency}`;
+      if (promo) {
+        url += `&promo=${promo}`;
+      }
+
+      window.open(url, "_blank");
+    });
+  }
+
+  // Initialize booking forms
+  handleBooking("bookingForm", "checkin", "checkout", "currency", "promo", "promoWarning");
+  handleBooking("bookingFormModal", "checkinModal", "checkoutModal", "currencyModal", "promoModal", "promoWarningModal");
+</script>
+
+<!--================ End Home Banner Area =================-->
+
+.
+
+
+
+  <!-- ============== About Us + Info Sections ============== -->
+<section class="about_us_section py-5" style="background-color: #d1e0d9;">
+  <div class="container text-center mb-5">
+    <p class="text-uppercase mb-2" style="letter-spacing: 3px; color: #007f8c;">
+      More than just a hostel
+    </p>
+    <h2 class="font-weight-bold" style="color: #007f8c;">About Us</h2>
+  </div>
+
+  <!-- Interactive Info Cards -->
+  <div class="container">
+    <div class="row">
+
+      <!-- Card 1: Community -->
+      <div class="col-md-4 mb-4">
+        <div class="info-card h-100 text-center p-4">
+          <img src="img/cowork.jpg" alt="Community" class="img-fluid rounded mb-3 card-img">
+          <h4 class="mb-2">Our Community</h4>
+          <p>Ocean Nomads is a vibrant family where travelers connect and share experiences.</p>
+        </div>
+      </div>
+
+      <!-- Card 2: Rooms -->
+      <div class="col-md-4 mb-4">
+        <div class="info-card h-100 text-center p-4">
+          <img src="img/sea.JPG" alt="Comfortable Rooms" class="img-fluid rounded mb-3 card-img">
+          <h4 class="mb-2">Comfortable Rooms</h4>
+          <p>Private or shared dorms, cozy and community-driven—find what fits you best.</p>
+        </div>
+      </div>
+
+      <!-- Card 3: Adventures -->
+      <div class="col-md-4 mb-4">
+        <div class="info-card h-100 text-center p-4">
+          <img src="img/view.JPG" alt="Adventures Await" class="img-fluid rounded mb-3 card-img">
+          <h4 class="mb-2">Adventures Await</h4>
+          <p>Surf, hike, dive, or relax on the beach—adventure is always around the corner.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+  <!--================ Video Carousel =================-->
+
+<section class="video-carousel">
+  <style>
+    .video-carousel .video-strip {
+      display: flex;
+      flex-direction: row;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      gap: 10px;
+      padding: 10px 0;
+    }
+    .video-carousel .video-strip video {
+      height: 220px;
+      min-width: 320px;
+      max-width: 100%;
+      border-radius: 12px;
+      object-fit: cover;
+      flex-shrink: 0;
+      background: #000;
+    }
+    .video-carousel .container-fluid {
+      padding-left: 0;
+      padding-right: 0;
+      overflow-x: hidden;
+    }
+  </style>
+  <div class="container-fluid p-0">
+    <div class="container text-center">
+      <p class="text-uppercase mb-2" style="letter-spacing: 2px; color:#070000;">Our hostel vibes</p>
+      <h2 class="text-center font-weight-bold mb-4" style="color: #aac5b8;">What we're up to!</h2>
+    </div>
+    <div class="video-strip">
+      <video src="videos/kareoke.mp4" autoplay loop muted playsinline></video>
+      <video src="videos/volleyball.mp4" autoplay loop muted playsinline></video>
+      <video src="videos/swim.MP4" autoplay loop muted playsinline></video>
+      <video src="videos/salsa.mp4" autoplay loop muted playsinline></video>
+      <video src="videos/kitchen.mp4" autoplay loop muted playsinline></video>
+      <video src="videos/sunbathe.mp4" autoplay loop muted playsinline></video>
+    </div>
+  </div>
+</section>
+
+<!--================ Circular Features =================-->
+<section class="features_area section_gap text-center"style="background-color:#eda494;">
+  <div class="container">
+    <div class="row">
+    <div class="container text-center">
+      <p class="text-uppercase mb-2" style="letter-spacing: 2px; color:#986054;">Explore our hostel</p>
+      <h2 class="text-center font-weight-bold mb-4" style="color: #986054;">Rooms and Activities</h2>
+    </div>
+
+      <!-- Private Rooms -->
+      <div class="col-lg-4 col-md-6">
+        <a href="spaces.html#private-rooms" class="feature_item d-block">
+          <img src="img/private.jpg" class="rounded-circle mb-3" alt="Private Rooms" width="200" height="200">
+          <h4>Private Rooms</h4>
+        </a>
+      </div>
+
+      <!-- Shared Dorms -->
+      <div class="col-lg-4 col-md-6">
+        <a href="spaces.html#shared-dorms" class="feature_item d-block">
+          <img src="img/shared.JPG" class="rounded-circle mb-3" alt="Shared Dorms" width="200" height="200">
+          <h4>Shared Dorms</h4>
+        </a>
+      </div>
+
+      <!-- Activities -->
+      <div class="col-lg-4 col-md-6">
+        <a href="gallery.html#activities" class="feature_item d-block">
+          <img src="img/activities/surf.jpg" class="rounded-circle mb-3" alt="Activities" width="200" height="200">
+          <h4>Activities</h4>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+ 
+
+<div class="section-divider">
+  <img src="img/shapes.jpg" alt="Section Divider" />
+</div>
+
+
+  <!--================ Good to Know =================-->
+  <section class="good_to_know py-5" style="background-color: #f8f9fa; color: #333;">
+    <div class="container text-center">
+      <p class="text-uppercase mb-2" style="letter-spacing: 2px;">Some Things to Note</p>
+      <h2 class="font-weight-bold mb-4">Facilities</h2>
+      <p class="mb-5">We provide you with all the information that may be useful during your stay.</p>
+      <div class="row text-center">
+        <div class="col-md-4 mb-4">
+          <p><i class="fas fa-globe mr-2"></i><strong>Daily Events</strong></p>
+          <p><i class="fab fa-whatsapp mr-2"></i><strong>+353 1 855 5660</strong></p>
+          <p><i class="fas fa-bath mr-2"></i><strong>Towels (3€)</strong></p>
+          <p><i class="fas fa-bed mr-2"></i><strong>Linen Included</strong></p>
+        </div>
+        <div class="col-md-4 mb-4">
+          <p><i class="fas fa-beer mr-2"></i><strong>Bar</strong></p>
+          <p><i class="fas fa-wifi mr-2"></i><strong>Free WiFi</strong></p>
+          <p><i class="fas fa-door-open mr-2"></i><strong>Check Out 11AM</strong></p>
+          <p><i class="fas fa-key mr-2"></i><strong>Check In 2PM-9PM</strong></p>
+        </div>
+        <div class="col-md-4 mb-4">
+          <p><i class="fas fa-water mr-2"></i><strong>Filtered Water Station</strong></p>
+          <p><i class="fas fa-wind mr-2"></i><strong>Air Conditioning</strong></p>
+          <p><i class="fas fa-suitcase mr-2"></i><strong>Luggage Storage</strong></p>
+          <p><i class="fas fa-tshirt mr-2"></i><strong>Laundry</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--================ End Good to Know =================-->
+
+  <div class="section-divider">
+  <img src="img/shapes.jpg" alt="Section Divider" />
+</div>
+
+
+  <section class="testimonials-area section_gap" style="background:#aac5b8 !important; padding:60px 0; text-align:center;">
+  <div class="container text-center">
+    
+    <p class="text-uppercase mb-2" style="letter-spacing: 2px; color:#ffffff;">What our guests think</p>
+    <h1 class="mt-3 font-weight-bold">Reviews</h1>
+    <p class="lead mb-5" style=color:#ffffff;">Genuine 5-Star Moments from Booking.com</p>
+
+    <div id="reviewsCarousel" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+
+        <!-- Review 1 -->
+        <div class="carousel-item active">
+          <div class="testi-item p-4 shadow mx-auto bg-white rounded" style="max-width:700px; color:#333;">
+            <h3 class="font-weight-bold">Dheeraj (Germany)</h3>
+            <div class="mb-2">
+              <i class="fa fa-star text-warning"></i>
+              <i class="fa fa-star text-warning"></i>
+              <i class="fa fa-star text-warning"></i>
+              <i class="fa fa-star text-warning"></i>
+              <i class="fa fa-star text-warning"></i>
+            </div>
+            <p class="mt-3">
+              “Very friendly staff, located near Los Cristianos port. Very accessible and a great place to start your solo journey and meet travelers.”  
+              <br><small><a href="https://www.booking.com/reviews/es/hotel/ocean-house-arona.html" target="_blank">Source: Booking.com</a></small>
+            </p>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="carousel-item">
+          <div class="testi-item p-4 shadow mx-auto bg-white rounded" style="max-width:700px; color:#333;">
+            <h3 class="font-weight-bold">Shalabh18 (France)</h3>
+            <div class="mb-2">
+              <i class="fa fa-star text-warning"></i>
+              <i class="fa fa-star text-warning"></i>
+              <i class="fa fa-star text-warning"></i>
+              <i class="fa fa-star text-warning"></i>
+              <i class="fa fa-star text-warning"></i>
+            </div>
+            <p class="mt-3">
+              “It’s right next to Los Cristianos and Las Americas beaches. Also, a full kitchen and fridge space is available… surrounded by restaurants and surf shops.”  
+              <br><small><a href="https://www.booking.com/reviews/es/hotel/ocean-house-arona.html" target="_blank">Source: Booking.com</a></small>
+            </p>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="carousel-item">
+          <div class="testi-item p-4 shadow mx-auto bg-white rounded" style="max-width:700px; color:#333;">
+            <h3 class="font-weight-bold">Anonymous Guest</h3>
+            <div class="mb-2">
+              <i class="fa fa-star text-warning"></i>
+              <i class="fa fa-star text-warning"></i>
+              <i class="fa fa-star text-warning"></i>
+              <i class="fa fa-star text-warning"></i>
+              <i class="fa fa-star text-warning"></i>
+            </div>
+            <p class="mt-3">
+              “The atmosphere is amazing, very welcoming, and the staff are super friendly. Highly recommended for travelers looking for a community vibe.”  
+              <br><small><a href="https://www.booking.com/reviews/es/hotel/ocean-house-arona.html" target="_blank">Source: Booking.com</a></small>
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Controls -->
+      <a class="carousel-control-prev" href="#reviewsCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#reviewsCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+</section>
+<div class="section-divider">
+  <img src="img/shapes2.png" alt="Section Divider" />
+</div>
+
+
+<!--================ Hostel Footer =================-->
+<footer class="footer-area" style="background:#aac5b8; color:#fff; padding:50px 0 20px;">
+  <div class="container">
+    <div class="row">
+
+      <!-- Logo + About -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <img src="img/logo.png" alt="Ocean Nomads Hostel Logo" style="max-width:150px;" class="mb-3">
+        <p>Ocean Nomads Hostel is an adults-only co-living and co-working space by the beach.  
+        A place to connect, create, and share adventures in Tenerife.</p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-lg-2 col-md-6 mb-4">
+        <h5 class="mb-3">Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="index.html" style="color:#fff;">Home</a></li>
+          <li><a href="spaces.html" style="color:#fff;">Spaces</a></li>
+          <li><a href="gallery.html" style="color:#fff;">Activities</a></li>
+          <li><a href="work.html" style="color:#fff;">Work With Us</a></li>
+          <li><a href="faqs.html" style="color:#fff;">FAQs</a></li>
+          <li><a href="contact.html" style="color:#fff;">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="col-lg-3 col-md-6 mb-4">
+        <h5 class="mb-3">Contact</h5>
+        <p><i class="fas fa-map-marker-alt mr-2"></i> Los Cristianos, Tenerife, Spain</p>
+        <p><i class="fas fa-phone mr-2"></i> +34 657 46 01 53</p>
+        
+      </div>
+
+      <!-- Social Media -->
+      <div class="col-lg-3 col-md-6 mb-4">
+        <h5 class="mb-3">Follow Us</h5>
+        <a href="https://instagram.com/oceannomadshostal" target="_blank" class="mr-3" style="color:#fff; font-size:20px;">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://wa.me/34600123456" target="_blank" class="mr-3" style="color:#fff; font-size:20px;">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+       
+      </div>
+    </div>
+
+    <hr style="border-color:rgba(255,255,255,0.3);">
+
+    <div class="row">
+      <div class="col text-center">
+        <p class="mb-0">&copy; <script>document.write(new Date().getFullYear());</script> Ocean Nomads Hostel. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+<!--================ End Hostel Footer =================-->
+
+<!-- Floating Side Tabs -->
+<div class="side-tabs">
+  <a href="https://chat.whatsapp.com/Csnb6aOwZlY1CeNQ3R6nyc?mode=ems_wa_t" target="_blank" class="tab whatsapp" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+  <a href="https://instagram.com/oceannomadshostal" target="_blank" class="tab instagram" aria-label="Instagram">
+    <i class="fab fa-instagram"></i>
+  </a>
+</div>
+
+
+  <!-- Scripts -->
+  <script>
+    const today = new Date().toISOString().split("T")[0];
+    const checkinInputs = document.querySelectorAll("#checkin");
+    const checkoutInputs = document.querySelectorAll("#checkout");
+
+    checkinInputs.forEach(inp => inp.setAttribute("min", today));
+    checkoutInputs.forEach(inp => inp.setAttribute("min", today));
+
+    checkinInputs.forEach(inp => {
+      inp.addEventListener("change", function () {
+        const checkinDate = new Date(this.value);
+        if (isNaN(checkinDate)) return;
+        const nextDay = new Date(checkinDate);
+        nextDay.setDate(checkinDate.getDate() + 1);
+        const nextDayStr = nextDay.toISOString().split("T")[0];
+        checkoutInputs.forEach(out => {
+          out.setAttribute("min", nextDayStr);
+          if (!out.value || out.value <= this.value) {
+            out.value = nextDayStr;
+          }
+        });
+      });
+    });
+
+    function handleBooking(e, formId) {
+      e.preventDefault();
+      const checkin = document.querySelector(`#${formId} #checkin`).value;
+      const checkout = document.querySelector(`#${formId} #checkout`).value;
+      const currency = document.querySelector(`#${formId} #currency`).value;
+      if (!checkin || !checkout) {
+        alert("Please select dates.");
+        return;
+      }
+      const url = `https://hotels.cloudbeds.com/en/reservation/4RhRCe?checkin=${checkin}&checkout=${checkout}&currency=${currency}`;
+      window.open(url, "_blank");
+    }
+
+    document.getElementById("bookingForm").addEventListener("submit", e => handleBooking(e, "bookingForm"));
+    document.getElementById("bookingFormModal").addEventListener("submit", e => handleBooking(e, "bookingFormModal"));
+  </script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+
+
+
+  <!-- The rest of your sections (Booking, About, Rooms, Testimonials, Blog, Footer) stay the same structure -->
+  <!-- Just replace "Radisson" with "Ocean Nomads Hostel" wherever needed -->
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="js/jquery.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="js/popper.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/stellar.js"></script>
+  <script src="vendors/lightbox/simpleLightbox.min.js"></script>
+  <script src="vendors/nice-select/js/jquery.nice-select.min.js"></script>
+  <script src="vendors/isotope/imagesloaded.pkgd.min.js"></script>
+  <script src="vendors/isotope/isotope.pkgd.min.js"></script>
+  <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+  <script src="js/owl-carousel-thumb.min.js"></script>
+  <script src="vendors/popup/jquery.magnific-popup.min.js"></script>
+  <script src="js/jquery.ajaxchimp.min.js"></script>
+  <script src="vendors/counter-up/jquery.waypoints.min.js"></script>
+  <script src="vendors/counter-up/jquery.counterup.js"></script>
+  <script src="js/mail-script.js"></script>
+  <script src="js/theme.js"></script>
+</body>
+
+</html>

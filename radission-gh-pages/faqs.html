@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="icon" href="img/favicon.png" type="image/png">
+  <title>Ocean Nomads Hostel</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="vendors/linericon/style.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
+  <link rel="stylesheet" href="vendors/lightbox/simpleLightbox.css">
+  <link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
+  <link rel="stylesheet" href="vendors/animate-css/animate.css">
+  <link rel="stylesheet" href="vendors/popup/magnific-popup.css">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+
+<!--================ Header =================-->
+<header class="header_area">
+  <div class="top_menu row m0">
+    <div class="container">
+      <div class="float-left">
+        <ul class="list header_social">
+          <li><a href="#">Contact Us +34 662 47 80 17</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="main_menu">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container">
+        <!-- Brand Logo -->
+        <a class="navbar-brand logo_h" href="index.html">
+          <img src="img/logo.png" alt="Ocean Nomads Hostel Logo" style="height:100px; width:auto;">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+          data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <!-- Navbar Links -->
+        <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+          <ul class="nav navbar-nav menu_nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="spaces.html">Spaces</a></li>
+            <li class="nav-item"><a class="nav-link" href="gallery.html">Activities</a></li>
+            <li class="nav-item"><a class="nav-link" href="work.html">Work With Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            <li class="nav-item active"><a class="nav-link" href="faqs.html">FAQs</a></li>
+
+            <!-- Book Now Button in Navbar -->
+            <li class="nav-item">
+              <button class="btn btn-info font-weight-bold ml-3" data-toggle="modal" data-target="#bookingModal">
+                Book Now
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+<!--================ End Header =================-->
+
+<!--================ Booking Modal (placed OUTSIDE header) =================-->
+<div class="modal fade" id="bookingModal" tabindex="-1" role="dialog" aria-labelledby="bookingModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content p-4">
+      <div class="modal-header">
+        <h5 class="modal-title font-weight-bold" id="bookingModalLabel">Book Your Stay</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="bookingFormModal" class="text-center">
+          <div class="form-group">
+            <label for="checkinModal">Check In</label>
+            <input type="date" class="form-control" id="checkinModal" required>
+          </div>
+          <div class="form-group">
+            <label for="checkoutModal">Check Out</label>
+            <input type="date" class="form-control" id="checkoutModal" required>
+          </div>
+          <div class="form-group">
+            <label for="currencyModal">Currency</label>
+            <select id="currencyModal" class="form-control" required>
+              <option value="eur" selected>EUR (€)</option>
+              <option value="usd">USD ($)</option>
+              <option value="gbp">GBP (£)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="promoModal">Promo Code</label>
+            <input type="text" class="form-control" id="promoModal" placeholder="Promo Code (optional)">
+          </div>
+          <button type="submit" class="btn btn-info btn-block font-weight-bold">Search</button>
+          <small id="promoWarningModal" class="text-warning d-none">⚠️ Invalid promo code</small>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Floating Book Now Button -->
+<button class="book-now-float" data-toggle="modal" data-target="#bookingModal">Book Now</button>
+ 
+
+<!-- =============== FAQ SECTION =============== -->
+<section class="faq-section py-5" style="background:#f9f9f9; margin-top:100px;">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="font-weight-bold" style="color:#000000;">Frequently Asked Questions</h2>
+      <p style="color:#555;">Got questions? We’ve got answers 🌊</p>
+    </div>
+
+    <div class="accordion" id="faqAccordion">
+      
+      <!-- FAQ Item 1 -->
+      <div class="card shadow-sm mb-3 border-0">
+        <div class="card-header d-flex justify-content-between align-items-center" id="faq1" style="background:#aac5b8; color:white; cursor:pointer;" data-toggle="collapse" data-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+          <h5 class="mb-0"><i class="fa fa-calendar-check-o mr-2"></i> How can I make a reservation?</h5>
+          <i class="fa fa-chevron-down"></i>
+        </div>
+        <div id="collapse1" class="collapse show" aria-labelledby="faq1" data-parent="#faqAccordion">
+          <div class="card-body">
+            Here in Ocean Nomads you can easily make a reservation through popular booking platforms like Booking.com, Hostelworld, or Expedia. However, to take full advantage of our exclusive discounts, we highly recommend booking directly with us here on our website.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ Item 2 -->
+      <div class="card shadow-sm mb-3 border-0">
+        <div class="card-header d-flex justify-content-between align-items-center" id="faq2" style="background:#aac5b8; color:white; cursor:pointer;" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+          <h5 class="mb-0"><i class="fa fa-times-circle-o mr-2"></i> Can I cancel my reservation?</h5>
+          <i class="fa fa-chevron-down"></i>
+        </div>
+        <div id="collapse2" class="collapse" aria-labelledby="faq2" data-parent="#faqAccordion">
+          <div class="card-body">
+            The guest can cancel free of charge until 2 days before arrival. The guest will be charged the total price of the reservation if they cancel in the 2 days before arrival. If the guest doesn't show up, they will be charged the total price of the reservation.<br><br>
+            We facilitate prepayment of the full amount from our guests before arrival, at the time of booking the accommodation.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ Item 3 -->
+      <div class="card shadow-sm mb-3 border-0">
+        <div class="card-header d-flex justify-content-between align-items-center" id="faq3" style="background:#aac5b8; color:white; cursor:pointer;" data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+          <h5 class="mb-0"><i class="fa fa-clock-o mr-2"></i> What are the check-in timeframes?</h5>
+          <i class="fa fa-chevron-down"></i>
+        </div>
+        <div id="collapse3" class="collapse" aria-labelledby="faq3" data-parent="#faqAccordion">
+          <div class="card-body">
+            <strong>Check-in:</strong> 14:00 pm to 21:00 pm<br>
+            <strong>Check-out:</strong> 11:00 am
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ Item 4 -->
+      <div class="card shadow-sm mb-3 border-0">
+        <div class="card-header d-flex justify-content-between align-items-center" id="faq4" style="background:#aac5b8; color:white; cursor:pointer;" data-toggle="collapse" data-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+          <h5 class="mb-0"><i class="fa fa-sign-in mr-2"></i> Can I do an early/late check-in?</h5>
+          <i class="fa fa-chevron-down"></i>
+        </div>
+        <div id="collapse4" class="collapse" aria-labelledby="faq4" data-parent="#faqAccordion">
+          <div class="card-body">
+            <strong>Early:</strong> Yes, no problem. Reception opens at 8:00 am. The room won't be ready until 2:00 pm. However, you are welcome to arrive earlier and use the facilities at the hostel until your room is ready.<br><br>
+            <strong>Late:</strong> Yes, of course! We can arrange a late check-in for you. For check-ins between 21:00 and 00:00, there is an additional fee of €10, and for check-ins between 00:00 and 02:00, the fee is €20. This charge helps us cover the cost of having someone return to the reception to assist with your check-in. Please let us know your expected arrival time in advance so we can make the necessary arrangements.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ Item 5 -->
+      <div class="card shadow-sm mb-3 border-0">
+        <div class="card-header d-flex justify-content-between align-items-center" id="faq5" style="background:#aac5b8; color:white; cursor:pointer;" data-toggle="collapse" data-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+          <h5 class="mb-0"><i class="fa fa-suitcase mr-2"></i> Is there a place to store my belongings after check out?</h5>
+          <i class="fa fa-chevron-down"></i>
+        </div>
+        <div id="collapse5" class="collapse" aria-labelledby="faq5" data-parent="#faqAccordion">
+          <div class="card-body">
+            Yes, you need to check out by 11:00 AM. While we don't have a locked space for your belongings inside the hostel, we do offer a designated safe area on the terrace where you can leave your bags after check-out. This way, you can explore the area without carrying your luggage. Additionally, you're welcome to use our facilities until 6:00 PM. Please feel free to ask at reception for more details.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ Item 6 -->
+      <div class="card shadow-sm mb-3 border-0">
+        <div class="card-header d-flex justify-content-between align-items-center" id="faq6" style="background:#aac5b8; color:white; cursor:pointer;" data-toggle="collapse" data-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
+          <h5 class="mb-0"><i class="fa fa-user-times mr-2"></i> Can under 18's stay at the hostel?</h5>
+          <i class="fa fa-chevron-down"></i>
+        </div>
+        <div id="collapse6" class="collapse" aria-labelledby="faq6" data-parent="#faqAccordion">
+          <div class="card-body">
+            Unfortunately, we cannot accommodate guests who are minors. Our policy requires all guests to be at least 18 years old to stay at the hostel. We appreciate your understanding.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ Item 7 -->
+      <div class="card shadow-sm mb-3 border-0">
+        <div class="card-header d-flex justify-content-between align-items-center" id="faq7" style="background:#aac5b8; color:white; cursor:pointer;" data-toggle="collapse" data-target="#collapse7" aria-expanded="false" aria-controls="collapse7">
+          <h5 class="mb-0"><i class="fa fa-paw mr-2"></i> Can I bring my pet?</h5>
+          <i class="fa fa-chevron-down"></i>
+        </div>
+        <div id="collapse7" class="collapse" aria-labelledby="faq7" data-parent="#faqAccordion">
+          <div class="card-body">
+            Unfortunately, for hygiene reasons, we do not allow pets at the hostel. We apologize for any inconvenience and appreciate your understanding.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Extra Styling -->
+<style>
+  .faq-section .card-header {
+    border-radius: 8px;
+    transition: 0.3s;
+  }
+  .faq-section .card-header:hover {
+    background:#007f8c !important;
+  }
+  .faq-section .card-body {
+    background: #fff;
+    border-radius: 0 0 8px 8px;
+    padding: 20px;
+    color: #444;
+  }
+  .faq-section i.fa-chevron-down {
+    transition: transform 0.3s ease;
+  }
+  .faq-section .collapse.show ~ .card-header i.fa-chevron-down {
+    transform: rotate(180deg);
+  }
+</style>
+
+<!--================ Hostel Footer =================-->
+<footer class="footer-area" style="background:#aac5b8; color:#fff; padding:50px 0 20px;">
+  <div class="container">
+    <div class="row">
+
+      <!-- Logo + About -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <img src="img/logo.png" alt="Ocean Nomads Hostel Logo" style="max-width:150px;" class="mb-3">
+        <p>Ocean Nomads Hostel is an adults-only co-living and co-working space by the beach.  
+        A place to connect, create, and share adventures in Tenerife.</p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-lg-2 col-md-6 mb-4">
+        <h5 class="mb-3">Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="index.html" style="color:#fff;">Home</a></li>
+          <li><a href="spaces.html" style="color:#fff;">Spaces</a></li>
+          <li><a href="gallery.html" style="color:#fff;">Activities</a></li>
+          <li><a href="work.html" style="color:#fff;">Work With Us</a></li>
+          <li><a href="faqs.html" style="color:#fff;">FAQs</a></li>
+          <li><a href="contact.html" style="color:#fff;">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="col-lg-3 col-md-6 mb-4">
+        <h5 class="mb-3">Contact</h5>
+        <p><i class="fas fa-map-marker-alt mr-2"></i> Los Cristianos, Tenerife, Spain</p>
+        <p><i class="fas fa-phone mr-2"></i> +34 657 46 01 53</p>
+        
+      </div>
+
+      <!-- Social Media -->
+      <div class="col-lg-3 col-md-6 mb-4">
+        <h5 class="mb-3">Follow Us</h5>
+        <a href="https://instagram.com/oceannomadshostal" target="_blank" class="mr-3" style="color:#fff; font-size:20px;">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://wa.me/34600123456" target="_blank" class="mr-3" style="color:#fff; font-size:20px;">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+       
+      </div>
+    </div>
+
+    <hr style="border-color:rgba(255,255,255,0.3);">
+
+    <div class="row">
+      <div class="col text-center">
+        <p class="mb-0">&copy; <script>document.write(new Date().getFullYear());</script> Ocean Nomads Hostel. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+<!--================ End Hostel Footer =================-->
+<!-- Floating Side Tabs -->
+<div class="side-tabs">
+  <a href="https://chat.whatsapp.com/Csnb6aOwZlY1CeNQ3R6nyc?mode=ems_wa_t" target="_blank" class="tab whatsapp" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+  <a href="https://instagram.com/yourhandle" target="_blank" class="tab instagram" aria-label="Instagram">
+    <i class="fab fa-instagram"></i>
+  </a>
+</div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/stellar.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+    <script src="vendors/lightbox/simpleLightbox.min.js"></script>
+    <script src="vendors/nice-select/js/jquery.nice-select.min.js"></script>
+    <script src="vendors/isotope/imagesloaded.pkgd.min.js"></script>
+    <script src="vendors/isotope/isotope.pkgd.min.js"></script>
+    <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+    <script src="js/owl-carousel-thumb.min.js"></script>
+    <script src="vendors/popup/jquery.magnific-popup.min.js"></script>
+    <script src="js/jquery.ajaxchimp.min.js"></script>
+    <script src="vendors/counter-up/jquery.waypoints.min.js"></script>
+    <script src="vendors/counter-up/jquery.counterup.js"></script>
+    <script src="js/mail-script.js"></script>
+    <script src="js/theme.js"></script>
+</body>
+
+</html>

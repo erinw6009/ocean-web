@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="icon" href="img/favicon.png" type="image/png">
+  <title>Ocean Nomads Hostel</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="vendors/linericon/style.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
+  <link rel="stylesheet" href="vendors/lightbox/simpleLightbox.css">
+  <link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
+  <link rel="stylesheet" href="vendors/animate-css/animate.css">
+  <link rel="stylesheet" href="vendors/popup/magnific-popup.css">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+
+<!--================ Header =================-->
+<header class="header_area">
+  <div class="top_menu row m0">
+    <div class="container">
+      <div class="float-left">
+        <ul class="list header_social">
+          <li><a href="#">Contact Us +34 657 46 01 53</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="main_menu">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container">
+        <!-- Brand Logo -->
+        <a class="navbar-brand logo_h" href="index.html">
+          <img src="img/logo.png" alt="Ocean Nomads Hostel Logo" style="height:100px; width:auto;">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+          data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <!-- Navbar Links -->
+        <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+          <ul class="nav navbar-nav menu_nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="spaces.html">Spaces</a></li>
+            <li class="nav-item active"><a class="nav-link" href="gallery.html">Activities</a></li>
+            <li class="nav-item"><a class="nav-link" href="work.html">Work With Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            <li class="nav-item"><a class="nav-link" href="faqs.html">FAQs</a></li>
+
+            <!-- Book Now Button in Navbar -->
+            <li class="nav-item">
+              <button class="btn btn-info font-weight-bold ml-3" data-toggle="modal" data-target="#bookingModal">
+                Book Now
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+<!--================ End Header =================-->
+
+<!--================ Booking Modal (placed OUTSIDE header) =================-->
+<div class="modal fade" id="bookingModal" tabindex="-1" role="dialog" aria-labelledby="bookingModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content p-4">
+      <div class="modal-header">
+        <h5 class="modal-title font-weight-bold" id="bookingModalLabel">Book Your Stay</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="bookingFormModal" class="text-center">
+          <div class="form-group">
+            <label for="checkinModal">Check In</label>
+            <input type="date" class="form-control" id="checkinModal" required>
+          </div>
+          <div class="form-group">
+            <label for="checkoutModal">Check Out</label>
+            <input type="date" class="form-control" id="checkoutModal" required>
+          </div>
+          <div class="form-group">
+            <label for="currencyModal">Currency</label>
+            <select id="currencyModal" class="form-control" required>
+              <option value="eur" selected>EUR (€)</option>
+              <option value="usd">USD ($)</option>
+              <option value="gbp">GBP (£)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="promoModal">Promo Code</label>
+            <input type="text" class="form-control" id="promoModal" placeholder="Promo Code (optional)">
+          </div>
+          <button type="submit" class="btn btn-info btn-block font-weight-bold">Search</button>
+          <small id="promoWarningModal" class="text-warning d-none">⚠️ Invalid promo code</small>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Floating Book Now Button -->
+<button class="book-now-float" data-toggle="modal" data-target="#bookingModal">Book Now</button>
+
+
+
+	  <div class="section-divider">
+  <img src="img/shapes.jpg" alt="Section Divider" />
+</div>
+<!-- ================= Activities Section ================= -->
+<section class="activities-carousel">
+  <div class="container text-center mb-4">
+    <p class="text-uppercase mb-2" style="letter-spacing:2px; color:#070000;">
+      What we do together
+    </p>
+    <h2 class="font-weight-bold mb-4" style="color:#aac5b8;">Activities</h2>
+  </div>
+
+  <!-- Carousel Wrapper -->
+  <div class="activities-strip-wrapper">
+    <div class="activities-strip">
+
+      <!-- Activity Cards -->
+      <div class="activity-card">
+        <img src="img/activities/yoga.jpg" alt="Yoga">
+        <div class="overlay">Yoga</div>
+      </div>
+      <div class="activity-card">
+        <img src="img/activities/relax.JPEG" alt="Relax">
+        <div class="overlay">Relax</div>
+      </div>
+      <div class="activity-card">
+        <img src="img/activities/paintsip.JPG" alt="Paint and Sip">
+        <div class="overlay">Paint & Sip</div>
+      </div>
+      <div class="activity-card">
+        <img src="img/activities/teide.jpg" alt="Teide Tour">
+        <div class="overlay">Teide Tour</div>
+      </div>
+      <div class="activity-card">
+        <img src="img/activities/cooking.JPEG" alt="Cooking Together">
+        <div class="overlay">Cooking</div>
+      </div>
+      <div class="activity-card">
+        <img src="img/activities/paraglide.jpeg" alt="Paragliding">
+        <div class="overlay">Paragliding</div>
+      </div>
+      <div class="activity-card">
+        <img src="img/activities/surf.jpg" alt="Surfing">
+        <div class="overlay">Surfing</div>
+      </div>
+      <div class="activity-card">
+        <img src="img/activities/hike.jpeg" alt="Sunset Hike">
+        <div class="overlay">Sunset Hike</div>
+      </div>
+      <div class="activity-card">
+        <img src="img/activities/beach.jpg" alt="Beach">
+        <div class="overlay">Beach</div>
+      </div>
+
+      <!-- Duplicate set for infinite scrolling -->
+      <div class="activity-card">
+        <img src="img/activities/yoga.jpg" alt="Yoga">
+        <div class="overlay">Yoga</div>
+      </div>
+      <div class="activity-card">
+        <img src="img/activities/relax.JPEG" alt="Relax">
+        <div class="overlay">Relax</div>
+      </div>
+      <div class="activity-card">
+        <img src="img/activities/paintsip.JPG" alt="Paint and Sip">
+        <div class="overlay">Paint & Sip</div>
+      </div>
+      <div class="activity-card">
+        <img src="img/activities/teide.jpg" alt="Teide Tour">
+        <div class="overlay">Teide Tour</div>
+      </div>
+      <div class="activity-card">
+        <img src="img/activities/cooking.JPEG" alt="Cooking Together">
+        <div class="overlay">Cooking</div>
+      </div>
+      <div class="activity-card">
+        <img src="img/activities/paraglide.jpeg" alt="Paragliding">
+        <div class="overlay">Paragliding</div>
+      </div>
+      <div class="activity-card">
+        <img src="img/activities/surf.jpg" alt="Surfing">
+        <div class="overlay">Surfing</div>
+      </div>
+      <div class="activity-card">
+        <img src="img/activities/hike.jpeg" alt="Sunset Hike">
+        <div class="overlay">Sunset Hike</div>
+      </div>
+      <div class="activity-card">
+        <img src="img/activities/beach.jpg" alt="Beach">
+        <div class="overlay">Beach</div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="container text-center mb-4">
+    <p class="lead">...and many more, follow our socials for the latest updates!</p>
+    <a href="https://chat.whatsapp.com/Csnb6aOwZlY1CeNQ3R6nyc?mode=ems_wa_t" class="btn btn-success">Join Our WhatsApp Group!</a>
+  </div>
+</section>
+
+<!-- Divider -->
+<div class="section-divider">
+  <img src="img/shapes.jpg" alt="Section Divider" />
+</div>
+
+<style>
+/* Activities Carousel */
+.activities-carousel {
+  width: 100%;
+  background: #f8f9fa;
+}
+
+.activities-strip-wrapper {
+  overflow-x: auto;          /* Allow manual swipe */
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;     /* Hide scrollbar Firefox */
+}
+.activities-strip-wrapper::-webkit-scrollbar {
+  display: none;             /* Hide scrollbar Chrome/Safari */
+}
+
+.activities-strip {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  width: max-content;
+  min-width: 100%;
+  box-sizing: border-box;
+  animation: scroll-horizontal 40s linear infinite;
+}
+
+@keyframes scroll-horizontal {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.activity-card {
+  position: relative;
+  flex-shrink: 0;
+  width: 220px;
+  height: 350px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+  background: #fff;
+}
+
+.activity-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+.activity-card:hover img {
+  transform: scale(1.1);
+}
+
+.activity-card .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: rgba(0,0,0,0.4);
+  padding: 12px;
+  letter-spacing: 1px;
+}
+
+/* Responsive Sizes */
+@media (max-width: 1200px) {
+  .activity-card { width: 180px; height: 280px; }
+}
+@media (max-width: 768px) {
+  .activities-strip { gap: 12px; padding: 12px; }
+  .activity-card { width: 140px; height: 200px; }
+}
+@media (max-width: 480px) {
+  .activities-strip { gap: 8px; padding: 8px; }
+  .activity-card { width: 110px; height: 140px; }
+  .activity-card .overlay { font-size: 14px; padding: 8px; }
+}
+</style>
+
+<script>
+// Pause auto-scroll when user interacts
+const stripWrapper = document.getElementById("activitiesWrapper");
+const strip = document.getElementById("activitiesStrip");
+
+stripWrapper.addEventListener("mouseenter", () => {
+  strip.style.animationPlayState = "paused";
+});
+stripWrapper.addEventListener("mouseleave", () => {
+  strip.style.animationPlayState = "running";
+});
+stripWrapper.addEventListener("touchstart", () => {
+  strip.style.animationPlayState = "paused";
+});
+stripWrapper.addEventListener("touchend", () => {
+  strip.style.animationPlayState = "running";
+});
+</script>
+<!--================ Hostel Footer =================-->
+<footer class="footer-area" style="background:#aac5b8; color:#fff; padding:50px 0 20px;">
+  <div class="container">
+    <div class="row">
+
+      <!-- Logo + About -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <img src="img/logo.png" alt="Ocean Nomads Hostel Logo" style="max-width:150px;" class="mb-3">
+        <p>Ocean Nomads Hostel is an adults-only co-living and co-working space by the beach.  
+        A place to connect, create, and share adventures in Tenerife.</p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-lg-2 col-md-6 mb-4">
+        <h5 class="mb-3">Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="index.html" style="color:#fff;">Home</a></li>
+          <li><a href="spaces.html" style="color:#fff;">Spaces</a></li>
+          <li><a href="gallery.html" style="color:#fff;">Activities</a></li>
+          <li><a href="work.html" style="color:#fff;">Work With Us</a></li>
+          <li><a href="faqs.html" style="color:#fff;">FAQs</a></li>
+          <li><a href="contact.html" style="color:#fff;">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="col-lg-3 col-md-6 mb-4">
+        <h5 class="mb-3">Contact</h5>
+        <p><i class="fas fa-map-marker-alt mr-2"></i> Los Cristianos, Tenerife, Spain</p>
+        <p><i class="fas fa-phone mr-2"></i> +34 657 46 01 53</p>
+        
+      </div>
+
+      <!-- Social Media -->
+      <div class="col-lg-3 col-md-6 mb-4">
+        <h5 class="mb-3">Follow Us</h5>
+        <a href="https://instagram.com/oceannomadshostal" target="_blank" class="mr-3" style="color:#fff; font-size:20px;">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://wa.me/34600123456" target="_blank" class="mr-3" style="color:#fff; font-size:20px;">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+       
+      </div>
+    </div>
+
+    <hr style="border-color:rgba(255,255,255,0.3);">
+
+    <div class="row">
+      <div class="col text-center">
+        <p class="mb-0">&copy; <script>document.write(new Date().getFullYear());</script> Ocean Nomads Hostel. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+<!--================ End Hostel Footer =================-->
+
+<!-- Floating Side Tabs -->
+<div class="side-tabs">
+  <a href="https://chat.whatsapp.com/Csnb6aOwZlY1CeNQ3R6nyc?mode=ems_wa_t" target="_blank" class="tab whatsapp" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+  <a href="https://instagram.com/oceannomadshostal" target="_blank" class="tab instagram" aria-label="Instagram">
+    <i class="fab fa-instagram"></i>
+  </a>
+</div>
+
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="js/jquery.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="js/popper.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/stellar.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+	<script src="vendors/lightbox/simpleLightbox.min.js"></script>
+	<script src="vendors/nice-select/js/jquery.nice-select.min.js"></script>
+	<script src="vendors/isotope/imagesloaded.pkgd.min.js"></script>
+	<script src="vendors/isotope/isotope.pkgd.min.js"></script>
+	<script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+	<script src="js/owl-carousel-thumb.min.js"></script>
+	<script src="vendors/popup/jquery.magnific-popup.min.js"></script>
+	<script src="js/jquery.ajaxchimp.min.js"></script>
+	<script src="vendors/counter-up/jquery.waypoints.min.js"></script>
+	<script src="vendors/counter-up/jquery.counterup.js"></script>
+	<script src="js/mail-script.js"></script>
+	<script src="js/theme.js"></script>
+</body>
+
+</html>
